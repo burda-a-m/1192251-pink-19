@@ -20,27 +20,27 @@
         </ul>
       </nav>
       <h1 class="title-page">Взгляните на жизнь иначе!</h1>
-      <img src="https://via.placeholder.com/258x289" width="258" height="289" alt="Результа работы приложения Pink"> <!--Пока оформил тегом img. Потом, вероятно, через стили оформлю-->
     </header>
 
     <main class="page-main">
       <section class="download">
         <h2 class="visually-hidden">Загрузка приложения</h2>
-        <a class="btn download__link" href="">Скачать приложение</a>
+        <a class="btn btn--download" href="">Скачать приложение</a>
         <div class="download__os-list">
-          <img src="img/apple-logo.svg" width="47" height="56" alt="Логотип Apple">
-          <img src="img/android-logo.svg" width="43" height="47" alt="Логотип Android">
-          <img src="img/microsoft-logo.svg" width="44" height="41" alt="Логотип Microsoft">
+          <a href="" class="download__os-link"><img src="img/apple-logo.svg" width="47" height="56" alt="Логотип Apple"></a>
+          <a href="" class="download__os-link"><img src="img/android-logo.svg" width="43" height="47" alt="Логотип Android"></a>
+          <a href="" class="download__os-link"><img src="img/microsoft-logo.svg" width="44" height="41" alt="Логотип Microsoft"></a>
         </div>
         <p class="download__info">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         </p>
       </section>
+
       <section class="advantage">
-        <header class="advantage__header">
+        <header class="advantage__header offer">
           <h2 class="visually-hidden">Достоинства приложения</h2>
-          <p class="advantage__offer">Устали от серости мегаполиса?</p>
-          <p class="advantage__offer">Нам есть, что вам предложить!</p>
+          <p class="offer__text">Устали от серости мегаполиса?</p>
+          <p class="offer__text">Нам есть, что вам предложить!</p>
         </header>
         <ul class="advantage__list">
           <li class="advantage__item">
@@ -62,7 +62,170 @@
             </p>
           </li>
         </ul>
-        <img src="https://via.placeholder.com/157x282" width="157" height="282" alt="Результата работы приложения Pink"> <!--Пока оформил тегом img. Потом, вероятно, через стили оформлю-->
+      </section>
+
+      <section class="reviews">
+        <h2 class="visualy-hidden">Отзывы о нас</h2>
+        <div class="reviews__list slider">
+          <blockquote class="reviews__item slider__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+          <blockquote class="reviews__item slider__item">
+            <cite class="reviews__author-name">.............</cite>
+            <p class="reviews__text">
+              ........................
+            </p>
+          </blockquote>
+          <blockquote class="reviews__item slider__item">
+            <cite class="reviews__author-name">.............</cite>
+            <p class="reviews__text">
+              ........................
+            </p>
+          </blockquote>
+          <p class="reviews__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
+        </div>
+      </section>
+
+      <section class="packages">
+        <h2 class="visually-hidden">Пакеты услуг</h2>
+        <ul class="packages__list slider">
+          <li class="packages__item slider__item hit">
+            <table class="packages__variant">
+              <tr>
+                <th class="packages__header" colspan="2">
+                  <h3 class="packages__title">Стандарт</h3>
+                  <p class="packages__price">3,99 USD</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Розовый фильтр
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Смайлики
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Комментарии
+                </td>
+                <td class="packages__value">
+                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
+                </td>
+              </tr>
+            </table>
+            <table class="packages__variant">
+              <tr>
+                <th class="packages__header" colspan="2">
+                  <h3 class="packages__title">Стандарт</h3>
+                  <p class="packages__price">3,99 USD</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Розовый фильтр
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Смайлики
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Комментарии
+                </td>
+                <td class="packages__value">
+                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
+                </td>
+              </tr>
+            </table>
+            <table class="packages__variant">
+              <tr>
+                <th class="packages__header" colspan="2">
+                  <h3 class="packages__title">Стандарт</h3>
+                  <p class="packages__price">3,99 USD</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Розовый фильтр
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Смайлики
+                </td>
+                <td class="packages__value">
+                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td class="packages__field">
+                  Комментарии
+                </td>
+                <td class="packages__value">
+                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </ul>
+        <p class="packages__toggles slider__toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
+      </section>
+
+      <section class="contacts-footer">
+        <div class="contacts-footer__offer offer">
+          <h2 class="visualy-hidden">Наши контакты</h2>
+          <p class="offer__text">
+            Остались вопросы?<br>
+            Свяжитесь с нами!
+          </p>
+        </div>
+        <address class="contacts-footer__block">
+          <p class="contacts-footer__field">Звоните:</p>
+          <a href="tel:+78125556666" class="contacts-footer__value">+7 (812) 555-66-66</a>
+        </address>
+        <address class="contacts-footer__block">
+          <p class="contacts-footer__field">Пишите:</p>
+          <a href="mailto:mail@htmlacademy.ru" class="contacts-footer__value">mail@htmlacademy.ru</a>
+        </address>
+        <address class="contacts-footer__block">
+          <p class="contacts-footer__field">Приезжайте в гости:</p>
+          <p class="contacts-footer__value">
+            ул. Большая<br>
+            Конюшенная, 19/8
+          </p>
+        </address>
+        <img src="https://via.placeholder.com/320x200" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
       </section>
     </main>
 
