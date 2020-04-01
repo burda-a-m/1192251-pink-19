@@ -23,7 +23,98 @@
     </header>
 
     <main class="page-main">
+        <div class="offer">
+          <h2 class="visualy-hidden">Приз за вашу историю</h2>
+          <p class="offer__text">
+            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          </p>
+        </div>
 
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form__fieldset fieldset">
+            <legend class="visualy-hidden">Представьтесь, пожалуйста</legend>
+            <div class="fielset__field-wrap">
+              <label class="fieldset__label fieldset__label--color" for="last-name">Фамилия:</label>
+              <input type="text" class="fieldset__value" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+            </div>
+            <div class="fielset__field-wrap">
+              <label class="fieldset__label fieldset__label--color" for="your-name">Имя:</label>
+              <input type="text" class="fieldset__value" id="your-name" name="your-name" placeholder="Укажите имя *" required>
+            </div>
+            <div class="fielset__field-wrap">
+              <label class="fieldset__label fieldset__label--color" for="second-name">Отчество:</label>
+              <input type="text" class="fieldset__value" id="second-name" name="second-name" placeholder="Ну и отчество тоже">
+            </div>
+          </fieldset>
+
+          <!--
+            Для пар input[type=checkbox]+label и input[type=radio]+label классы не ставлю.
+            Как правило, чекбоксы и радиокнопки сопровождаются подсказками/этикетками.
+            Полагаю, что на сайте эти элемнты будут иметь один дизайн.
+            Поэтому проще в CSS прописать правила для всех чекбоксов и радикнопок
+            (а если быть точнее, для сопровождающих их label'ов, т.к. у самих чекбоксов и
+            радиокнопок будет стоять display:none или весеть класс visually-hidden).
+           -->
+          <fieldset class="form__fieldset fieldset fieldset--even">
+            <legend class="fieldset__title">Ваши безшабашные достижения в путешествии</legend>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="selfi-shark" name="selfi-shark" checked>
+              <label for="selfi-shark">Сделал селфи с акулой</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="burned-beach" name="burned-beach" checked>
+              <label for="burned-beach">Обгорел на пляже</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="see-norris" name="see-norris">
+              <label for="see-norris">Видел Чака Норриса</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="buy-souvenirs" name="buy-souvenirs">
+              <label for="buy-souvenirs">Накупил сувениров</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="held-tower" name="held-tower" checked>
+              <label for="held-tower">Удержал башню</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="checkbox" id="trashed-hotel" name="trashed-hotel">
+              <label for="trashed-hotel">Разгромил отель</label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <legend class="visualy-hidden">Контактные данные</legend>
+            <div class="fielset__field-wrap">
+              <label class="fieldset__label fieldset__label--color" for="phone">Номер телефона</label>
+              <input type="text" class="fieldset__value" id="phone" name="phone" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="fielset__field-wrap">
+              <label class="fieldset__label fieldset__label--color" for="mail">Адрес почты</label>
+              <input type="text" class="fieldset__value" id="mail" name="mail" placeholder="Введите почту *" required>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset fieldset--even">
+            <legend class="fieldset__title">С каким приложением путешествовали?</legend>
+            <div class="fielset__field-wrap">
+              <input type="radio" id="app-ios" name="app" value="Pink для iOS">
+              <label for="app-ios">Pink для iOS</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="radio" id="app" name="app" value="Pink на Android" checked>
+              <label for="app">Pink на Android</label>
+            </div>
+            <div class="fielset__field-wrap">
+              <input type="radio" id="app" name="app" value="Windows Phone">
+              <label for="app">Windows Phone</label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset">
+            <legend class="fieldset__title">Опишите свои эмоции</legend>
+            <textarea name="message" cols="30" rows="10">
+              Можно прям в красках, не стесняясь в выражениях
+            </textarea>
+          </fieldset>
+        </form>
     </main>
 
     <footer class="page-footer">
@@ -43,12 +134,12 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <p class="page-footer__copyright copyright">
+        Разработано
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <img class="photo__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML Academy">
         </a>
-      </div>
+      </p>
     </footer>
   </body>
 </html>
