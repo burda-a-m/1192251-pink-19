@@ -1,0 +1,37 @@
+.site-list {
+  list-style: none;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__item {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+
+
+  & a {
+    display: block;
+
+    line-height: 63px;
+    margin-bottom: 1px;
+
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: #283645;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.15),
+                0px 1px 0px 0px #000000;
+  }
+}
+
+
+
+
+
+

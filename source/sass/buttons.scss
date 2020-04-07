@@ -1,0 +1,35 @@
+.btn {
+  display: block;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  line-height: 55px;
+
+  text-align: center;
+
+  border-radius: 100px;
+
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: $call-to-action__color;
+  background-color: transparent;
+  border: solid 3px $call-to-action__color;
+
+  margin: 5px 0;
+}
+
+.btn[type="reset"] {
+  color: rgba(40, 54, 69, 0.1);
+
+  border-color: rgba(40, 54, 69, 0.1);
+}
+
+.btn--transporent {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
