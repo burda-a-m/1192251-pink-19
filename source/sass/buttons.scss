@@ -23,9 +23,9 @@
 }
 
 .btn[type="reset"] {
-  color: rgba(40, 54, 69, 0.1);
+  color: $reset__color;
 
-  border-color: rgba(40, 54, 69, 0.1);
+  border-color: $reset__color;
 }
 
 .btn--transporent {
