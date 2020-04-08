@@ -1,0 +1,52 @@
+.photo {
+  margin-bottom: 20px;
+}
+
+.photo__top {
+  text-align: center;
+}
+
+.photo__wrap {
+  margin: 0 20px;
+  padding: 0 20px;
+  background-color: $bg-gray;
+}
+
+.photo__author {
+  font-weight: bold;
+}
+
+.photo__date {
+  font-weight: lighter;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.photo__like {
+  font-size: 12px;
+  color: $call-to-action__color;
+  text-transform: uppercase;
+}
+
+/*
+.photo {
+  padding: 0 20px;
+
+  &--main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.photo__wrap {
+  padding: 0 20px;
+  background-color: $bg-gray;
+
+  &
+}
+
+.photo__text {
+
+}
+
+**/

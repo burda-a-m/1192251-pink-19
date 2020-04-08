@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+
+  width: 49px;
+  height: 49px;
+
+  margin: 0 6px;
+
+  border: solid $reset__color 3px;
+
+  border-radius: 50%;
+}
