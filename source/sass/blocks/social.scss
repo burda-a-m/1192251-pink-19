@@ -6,12 +6,37 @@
 .social__link {
   display: block;
 
-  width: 49px;
-  height: 49px;
+  box-sizing: content-box;
+
+  width: 46px;
+  height: 46px;
 
   margin: 0 6px;
 
   border: solid $reset__color 3px;
 
   border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 46px;
+    height: 46px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--twitter::before {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook::before {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube::before {
+    background-image: url("../img/icon-youtube.svg");
+  }
 }

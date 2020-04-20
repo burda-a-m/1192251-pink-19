@@ -1,0 +1,36 @@
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__toggle {
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  box-sizing: content-box;
+
+  border-radius: 50%;
+
+  background-color: rgba(40, 54, 69, 0.3);
+  border: none;
+
+  &--active {
+    background-color: transparent;
+    border: solid 3px $color;
+  }
+}
+
+.slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

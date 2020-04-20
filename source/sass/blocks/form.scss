@@ -1,0 +1,117 @@
+/* Примись для placeholder */
+@mixin input-placeholder() {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {/* Firefox 18- */
+    @content;
+  }
+
+  ::-moz-placeholder {/* Firefox 19+ */
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+/* Оформляю placeholder */
+@include input-placeholder {
+  @include input--text();
+}
+
+/* --- */
+
+.form__wrap {
+  padding: 20px 0;
+}
+
+/* --- */
+
+.form__fieldset {
+  margin: 0;
+  padding: 35px 20px;
+
+  border: none;
+}
+
+.form__fieldset--advances,
+.form__fieldset--app {
+  background-color: $bg-gray;
+}
+
+.form__legend {
+  float: left;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 35px;
+
+  line-height: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $call-to-action__color;
+
+  &--hidden {
+    @include visually-hidden();
+  }
+}
+
+.form__label-caption {
+  display: block;
+
+  padding-left: 18px;
+  padding-bottom: 10px;
+
+  text-transform: uppercase;
+  color: $call-to-action__color;
+}
+
+.form__input {
+  width: 100%;
+  height: 59px;
+
+  padding: 0 18px;
+
+  border: solid #e5e5e5 2px;
+
+  @include input--text();
+}
+
+.form__textarea {
+  width: 100%;
+  height: 197px;
+  resize: none;
+
+  padding: 18px;
+
+  border: solid #e5e5e5 2px;
+
+  @include input--text();
+}
+
+/* --- */
+
+.form__label-value {
+  font-size: 18px;
+}
+
+/* --- */
+
+.form__footer {
+  padding: 0 20px;
+}
+
+.form__footnote {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__warn {
+  color: $call-to-action__color;
+}
