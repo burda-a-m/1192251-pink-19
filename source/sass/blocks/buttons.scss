@@ -22,14 +22,22 @@
   margin: 5px 0;
 }
 
-.btn[type="reset"] {
+.btn--reset {
   color: $reset__color;
 
   border-color: $reset__color;
 }
 
-.btn--transporent {
+.btn--transparent {
   color: #ffffff;
   background-color: transparent;
   border-color: #ffffff;
+}
+
+.btn--send {
+  border-radius: 2px;
+
+  color: #ffffff;
+  background-color: #2aab6d;
+  border-color: #2aab6d;
 }

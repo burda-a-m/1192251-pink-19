@@ -1,0 +1,28 @@
+.contacts-footer__field {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contacts-footer__value {
+  display: block;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+
+  color: $call-to-action__color;
+
+  &[href]:hover,
+  &[href]:focus {
+    text-decoration: underline;
+    color: $color;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}

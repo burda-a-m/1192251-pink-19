@@ -1,14 +1,53 @@
-.photo {
-  margin-bottom: 20px;
+.photo__link {
+  display: block;
+  position: relative;
+
+  width: 280px;
+
+  margin: 0 auto;
 }
 
-.photo__top {
-  text-align: center;
+.photo--main .photo__link {
+  width: 320px;
+}
+
+.photo__image {
+  display: block;
+}
+
+.photo__mark {
+  display: flex;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+
+  @include wrap();
+
+  &::before {
+    content: "Панорама дня";
+
+    display: block;
+    width: 140px;
+    line-height: 36px;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #ffffff;
+    background-color: $call-to-action__color;
+  }
 }
 
 .photo__wrap {
-  margin: 0 20px;
-  padding: 0 20px;
+  width: 280px;
+
+  @include wrap();
+
   background-color: $bg-gray;
 }
 
@@ -26,27 +65,9 @@
   font-size: 12px;
   color: $call-to-action__color;
   text-transform: uppercase;
+  text-decoration: none;
+
+  padding-left: 32px;
+
+  background: url("../img/icon-heart.svg") left center no-repeat;
 }
-
-/*
-.photo {
-  padding: 0 20px;
-
-  &--main {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.photo__wrap {
-  padding: 0 20px;
-  background-color: $bg-gray;
-
-  &
-}
-
-.photo__text {
-
-}
-
-**/

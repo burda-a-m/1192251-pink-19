@@ -9,35 +9,40 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="main-nav__logo-link">
-          <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
-        </a>
-        <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-        </ul>
-      </nav>
+      <div class="page-header__top">
+        <nav class="main-nav">
+          <div class="main-nav__top">
+            <a class="main-nav__logo-link">
+              <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
+            </a>
+            <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
+          </div>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+            <li class="site-list__item"><a href="form.html">Конкурс</a></li>
+            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </div>
       <h1 class="title-page">Взгляните на жизнь иначе!</h1>
+      <section class="download">
+        <div class="page-header__wrap">
+          <h2 class="visually-hidden">Загрузка приложения</h2>
+          <a class="btn btn--transparent" href="">Скачать приложение</a>
+          <div class="download__os-list">
+            <a href="" class="download__os-link"><img src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
+            <a href="" class="download__os-link"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
+            <a href="" class="download__os-link"><img src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
+          </div>
+          <p class="download__info">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
+      </section>
     </header>
 
     <main class="page-main">
-      <section class="download">
-        <h2 class="visually-hidden">Загрузка приложения</h2>
-        <a class="btn btn--transporent" href="">Скачать приложение</a>
-        <div class="download__os-list">
-          <a href="" class="download__os-link"><img src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
-          <a href="" class="download__os-link"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
-          <a href="" class="download__os-link"><img src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
-        </div>
-        <p class="download__info">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
-      </section>
-
       <section class="advantage">
         <header class="advantage__header offer">
           <h2 class="visually-hidden">Достоинства приложения</h2>
@@ -67,146 +72,122 @@
       </section>
 
       <section class="reviews">
-        <h2 class="visualy-hidden">Отзывы о нас</h2>
+        <h2 class="visually-hidden">Отзывы о нас</h2>
         <div class="reviews__list slider">
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item slider__item slider__item--active">
             <cite class="reviews__author-name">Николай Петров</cite>
             <p class="reviews__text">
               «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
             </p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">.............</cite>
+            <cite class="reviews__author-name">Иван Иванов</cite>
             <p class="reviews__text">
-              ........................
+              «Случайно в Интернете наткнулся на приложение Пинк. Описание программы меня заинтересовало, решил испробовать её на деле. Установил на смартфон. Оказалось, отличная небольшая программа...»
             </p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">.............</cite>
+            <cite class="reviews__author-name">Василий Васильев</cite>
             <p class="reviews__text">
-              ........................
+              «Данное приложение устанавливал маме. Оно оказалось удобным и простым — то, что ей нужно. К Пинк мама приспособилась на редкость быстро, причем сама. Просто показал ей функционал и теперь она сама справляется...»
             </p>
           </blockquote>
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">Отзыв 1</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 2</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 3</span></button>
           </p>
         </div>
       </section>
 
       <section class="packages">
         <h2 class="visually-hidden">Пакеты услуг</h2>
-        <ul class="packages__list slider">
-          <li class="packages__item slider__item hit">
-            <table class="packages__variant">
-              <tr>
-                <th class="packages__header" colspan="2">
-                  <h3 class="packages__title">Стандарт</h3>
-                  <p class="packages__price">3,99 USD</p>
-                </th>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Розовый фильтр
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Смайлики
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Комментарии
-                </td>
-                <td class="packages__value">
-                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
-                </td>
-              </tr>
-            </table>
-            <table class="packages__variant">
-              <tr>
-                <th class="packages__header" colspan="2">
-                  <h3 class="packages__title">Стандарт</h3>
-                  <p class="packages__price">3,99 USD</p>
-                </th>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Розовый фильтр
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Смайлики
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Комментарии
-                </td>
-                <td class="packages__value">
-                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
-                </td>
-              </tr>
-            </table>
-            <table class="packages__variant">
-              <tr>
-                <th class="packages__header" colspan="2">
-                  <h3 class="packages__title">Стандарт</h3>
-                  <p class="packages__price">3,99 USD</p>
-                </th>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Розовый фильтр
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Смайлики
-                </td>
-                <td class="packages__value">
-                  <span class="packages__on"><span class="visualy-hidden">Есть</span></span>
-                </td>
-              </tr>
-              <tr>
-                <td class="packages__field">
-                  Комментарии
-                </td>
-                <td class="packages__value">
-                  <span class="packages__off"><span class="visualy-hidden">Нет</span></span>
-                </td>
-              </tr>
-            </table>
-          </li>
-        </ul>
+        <table class="packages__variants">
+          <tr>
+            <td class="packages__empty">
+              &nbsp;
+            </td>
+            <th class="packages__header">
+              <h3 class="packages__title">База</h3>
+              <p class="packages__price">1,99 USD</p>
+            </th>
+            <th class="packages__header packages__header--hit">
+              <h3 class="packages__title">Стандарт</h3>
+              <p class="packages__price">3,99 USD</p>
+            </th>
+            <th class="packages__header">
+              <h3 class="packages__title">Анлим</h3>
+              <p class="packages__price">3,99 USD</p>
+            </th>
+          </tr>
+          <tr>
+            <th class="packeges__field">
+              Розовый фильтр
+            </th>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Розовый фильтр</span>
+              <span class="visually-hidden">Есть</span>
+            </td>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Розовый фильтр</span>
+              <span class="visually-hidden">Есть</span>
+            </td>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Розовый фильтр</span>
+              <span class="visually-hidden">Есть</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="packeges__field">
+              Смайлики
+            </th>
+            <td class="packeges__result">
+              <span class="packeges__field-retry">Смайлики</span>
+              <span class="visually-hidden">Нет</span>
+            </td>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Смайлики</span>
+              <span class="visually-hidden">Есть</span>
+            </td>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Смайлики</span>
+              <span class="visually-hidden">Есть</span>
+            </td>
+          </tr>
+          <tr>
+            <th class="packeges__field">
+              Комментарии
+            </th>
+            <td class="packeges__result">
+              <span class="packeges__field-retry">Комментарии</span>
+              <span class="visually-hidden">Нет</span>
+            </td>
+            <td class="packeges__result">
+              <span class="packeges__field-retry">Комментарии</span>
+              <span class="visually-hidden">Нет</span>
+            </td>
+            <td class="packeges__result packeges__result--yes">
+              <span class="packeges__field-retry">Комментарии</span>
+                <span class="visually-hidden">Есть</span>
+            </td>
+          </tr>
+        </table>
         <p class="packages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Слайд №1</span>
+          </button>
+          <button class="slider__toggle slider__toggle--active" type="button">
+            <span class="visually-hidden">Слайд №2</span>
+          </button>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Слайд №3</span>
+          </button>
         </p>
       </section>
 
       <section class="contacts-footer">
         <div class="contacts-footer__offer offer">
-          <h2 class="visualy-hidden">Наши контакты</h2>
+          <h2 class="visually-hidden">Наши контакты</h2>
           <p class="offer__text">
             Остались вопросы?<br>
             Свяжитесь с нами!
@@ -227,7 +208,11 @@
             Конюшенная, 19/8
           </p>
         </address>
-        <img src="https://via.placeholder.com/320x200" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
+        <div class="contacts-footer__map map">
+          <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991036590476!2d30.32178190113365!3d59.93879419359227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1578918454797!5m2!1sru!2sby" width="320" height="200" allowfullscreen></iframe>
+
+        </div>
       </section>
     </main>
 
