@@ -9,23 +9,32 @@
   <body>
 
     <header class="page-header">
-      <div class="page-header__top">
-        <nav class="main-nav">
-          <div class="main-nav__top">
-            <a class="main-nav__logo-link" href="index.httml">
-              <img class="main-nav__logo" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
+
+      <section class="page-header__top">
+        <div class="page-header__top-wrap">
+
+          <div class="page-header__add-nav">
+            <a class="page-header__logo"  href="index.html">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
             </a>
-            <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
+            <button class="page-header__nav-toggle"><span class="visually-hidden">Меню</span></button>
           </div>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a  href="index.html">Главная</a></li>
-            <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-            <li class="site-list__item site-list__item--active"><a>Конкурс</a></li>
-            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></li>
-          </ul>
-        </nav>
+
+          <nav class="page-header__nav main-nav">
+            <a class="main-nav__item" href="index.html">Главная</a>
+            <a class="main-nav__item" href="photo.html">Фотографии</a>
+            <a class="main-nav__item main-nav__item--active">Конкурс</a>
+            <a class="main-nav__item" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+          </nav>
+
+        </div>
+      </section>
+
+      <div class="page-header__bottom">
+        <div class="page-header__bottom-wrap">
+          <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
       </div>
-      <h1 class="title-page">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
 
     <main class="page-main">

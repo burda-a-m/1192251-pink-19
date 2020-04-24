@@ -7,8 +7,16 @@
 }
 
 .download__info {
+  padding: 0;
+
   text-align: center;
 
   font-weight: lighter;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .download {
+    background-color: transparent;
+  }
 }
