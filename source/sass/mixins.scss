@@ -14,6 +14,20 @@
   overflow: hidden;
 }
 
+@mixin link-text() {
+  color: $call-to-action__color;
+
+  &[href]:hover,
+  &[href]:focus {
+    text-decoration: underline;
+    color: $color;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
 @mixin input--text() {
   font-family: $font-family;
   font-size: 18px;
@@ -24,4 +38,10 @@
 @mixin wrap() {
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

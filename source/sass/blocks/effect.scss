@@ -1,0 +1,62 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .effect {
+    display: block;
+  }
+
+  .effect__wrap {
+    width: $tablet-width;
+
+    @include wrap();
+
+    background-image: url("../img/icon-timer--new.svg");
+    background-position: $padding-hor 0;
+    background-repeat: no-repeat;
+  }
+
+  .effect__title {
+    margin-left: 50%;
+
+    line-height: 36px;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .effect__text {
+    margin-left: 50%;
+  }
+
+  .effect__link {
+    @include link-text();
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .effect {
+    background-color: $bg-gray;
+  }
+
+  .effect__wrap {
+    width: $desktop-width;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-size: 298px 345px;
+  }
+
+  .effect__br-title {
+    display: none;
+  }
+
+  .effect__text {
+    line-height: 30px;
+
+    font-size: 18px;
+  }
+}

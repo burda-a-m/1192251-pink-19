@@ -14,15 +14,5 @@
   text-decoration: none;
   text-align: center;
 
-  color: $call-to-action__color;
-
-  &[href]:hover,
-  &[href]:focus {
-    text-decoration: underline;
-    color: $color;
-  }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
+  @include link-text();
 }

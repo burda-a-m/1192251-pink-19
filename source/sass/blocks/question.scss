@@ -1,0 +1,31 @@
+.question {
+  display: flex;
+  align-items: center;
+
+  min-height: 187px;
+  padding: 40px 20px;
+}
+
+.question__text {
+  width: 250px;
+  margin: auto;
+
+  line-height: 30px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .question__text {
+    width: 500px;
+
+    @include wrap();
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .question__text {
+    width: 620px;
+  }
+}

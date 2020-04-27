@@ -1,18 +1,17 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+}
+
 .photo__link {
   display: block;
   position: relative;
-
-  width: 280px;
-
-  margin: 0 auto;
-}
-
-.photo--main .photo__link {
-  width: 320px;
 }
 
 .photo__image {
   display: block;
+
+  width: 100%;
 }
 
 .photo__mark {
@@ -44,15 +43,21 @@
 }
 
 .photo__wrap {
-  width: 280px;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 
   @include wrap();
 
   background-color: $bg-gray;
 }
 
-.photo__author {
-  font-weight: bold;
+.photo--main .photo__wrap {
+  width: auto;
+  margin: 0 $padding-hor;
 }
 
 .photo__date {
@@ -62,12 +67,39 @@
 }
 
 .photo__like {
+  margin-top: auto;
+
+  padding-left: 32px;
+
   font-size: 12px;
   color: $call-to-action__color;
   text-transform: uppercase;
   text-decoration: none;
 
-  padding-left: 32px;
-
   background: url("../img/icon-heart.svg") left center no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .photo__wrap {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .photo__mark {
+    top: 57px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__mark {
+    width: $desktop-width;
+    top: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .photo--main .photo__wrap {
+    width: 940px;
+    margin: 0 auto;
+  }
 }

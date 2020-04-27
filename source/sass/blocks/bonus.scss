@@ -1,14 +1,14 @@
-.call-action {
+.bonus {
   padding: 0 20px;
 }
 
-.call-action__text {
+.bonus__text {
   line-height: 30px;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
-  .call-action__text {
+  .bonus__text {
     width: 500px;
 
     @include wrap();
@@ -16,7 +16,7 @@
     font-size: 18px;
   }
 
-  .call-action__br-text {
+  .bonus__br-text {
     display: none;
   }
 }

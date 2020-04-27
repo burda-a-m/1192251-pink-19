@@ -32,17 +32,19 @@
 }
 
 .packages__header {
+  padding: 15px 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
   color: #ffffff;
   background-color: $color;
 }
 
-.packages__title {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 .packages__price {
+  margin: 0;
+
   font-size: 24px;
   font-weight: 300;
 }
