@@ -6,16 +6,22 @@
   text-align: center;
 }
 
-.index .page-footer {
+.not-footer .page-footer {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer,
-  .index .page-footer {
+  .not-footer .page-footer {
     display: flex;
     justify-content: space-between;
 
     max-width: $desktop-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    @include wrap--desktop();
   }
 }

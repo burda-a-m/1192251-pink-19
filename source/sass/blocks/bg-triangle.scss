@@ -1,0 +1,33 @@
+.bg-triangle {
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.bg-triangle::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  font-size: 30px; /* Размер шрифта равен высоте треугольника. */
+  border: 1em solid #ffffff;
+  border-bottom: none;
+  border-left-width: 50vw;
+  border-right-width: 50vw;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .bg-triangle::after {
+    font-size: 67px; /* Размер шрифта равен высоте треугольника. */
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bg-triangle::after {
+    font-size: 101px; /* Размер шрифта равен высоте треугольника. */
+  }
+}

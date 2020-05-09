@@ -1,4 +1,35 @@
+
+
 .photofilter {
-  padding: 0 20px;
   background-color: $bg-gray;
+}
+
+.photofilter__form {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  background-color: $bg-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .photofilter__form {
+    max-width: $tablet-width;
+
+    margin: 0 auto;
+    padding-left: $padding-hor;
+    padding-right: $padding-hor;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photofilter {
+    background-color: #ffffff;
+  }
+
+  .photofilter__form {
+    max-width: $desktop-width - $padding-hor-desktop * 2;
+
+    padding-left: 80px;
+    padding-right: 60px;
+  }
 }

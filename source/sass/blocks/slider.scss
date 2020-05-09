@@ -1,36 +1,95 @@
-.slider__toggles {
+.slider {
+  position: relative;
+}
+
+.slider__viewport {
+  overflow-x: hidden;
+}
+
+.slider__viewbox {
+  @include wrap();
+}
+
+.slider__list {
+  width: 100%;
+  margin-left: 0;
+  // Изменяя margin-left кратно -100% (отрицательное число),
+  // сдвигается влево/вправо содержимое слайдера.
+  // 0 - 1-й слайд
+  // -100% - 2-й слайд
+  // -200% - 3-й слайд и т.д.
+  white-space: nowrap;
+}
+
+.slider__item {
+  display: inline-block;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+}
+
+.slider__toggle-list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .slider__toggle {
-  display: block;
-  width: 6px;
-  height: 6px;
+  display: flex;
 
-  padding: 0;
+  width: 20px;
+  height: 20px;
+
   margin: 0;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 0;
 
-  box-sizing: content-box;
-
-  border-radius: 50%;
-
-  background-color: rgba(40, 54, 69, 0.3);
   border: none;
+  background-color: transparent;
 
-  &--active {
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    margin: auto;
+
+    box-sizing: content-box;
+
+    border-radius: 50%;
+
+    background-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &--active::after {
     background-color: transparent;
     border: solid 3px $color;
   }
 }
 
-.slider__item {
-  display: none;
+.slider__arrow {
+  display: block;
 
-  &--active {
-    display: block;
+  width: 41px;
+  height: 41px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  border: none;
+
+  &--left {
+    background-image: url("../img/icon-review-arrow-left.svg");
+    background-position: left center;
+  }
+
+  &--right {
+    background-image: url("../img/icon-review-arrow-left.svg");
+
+    transform: rotate(180deg);
   }
 }

@@ -3,46 +3,24 @@
   flex-direction: column;
 }
 
-.photo__link {
+.photo--main {
   display: block;
-  position: relative;
 }
 
 .photo__image {
   display: block;
 
   width: 100%;
+  height: auto;
 }
 
-.photo__mark {
-  display: flex;
-  justify-content: flex-end;
+.photo__link {
+  display: block;
 
-  position: absolute;
-  top: 0;
-
-  width: 100%;
-
-  @include wrap();
-
-  &::before {
-    content: "Панорама дня";
-
-    display: block;
-    width: 140px;
-    line-height: 36px;
-
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-
-    color: #ffffff;
-    background-color: $call-to-action__color;
-  }
+  text-decoration: none;
 }
 
-.photo__wrap {
+.photo__info {
   flex-grow: 1;
 
   display: flex;
@@ -55,15 +33,38 @@
   background-color: $bg-gray;
 }
 
-.photo--main .photo__wrap {
-  width: auto;
-  margin: 0 $padding-hor;
+.photo__main-mark {
+  position: relative;
+  height: 0;
+  max-width: $desktop-width;
+
+  @include wrap();
+
+  &::after {
+    content: "Панорама дня";
+
+    display: block;
+    width: 140px;
+    line-height: 36px;
+
+    position: absolute;
+    bottom: -36px;
+    right: $padding-hor;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #ffffff;
+    background-color: $call-to-action__color;
+  }
 }
 
-.photo__date {
-  font-weight: lighter;
-  font-size: 12px;
-  text-transform: uppercase;
+.photo--main .photo__info {
+  width: auto;
+
+  margin: 0 $padding-hor;
 }
 
 .photo__like {
@@ -77,29 +78,44 @@
   text-decoration: none;
 
   background: url("../img/icon-heart.svg") left center no-repeat;
+  background-size: 13px;
 }
 
 @media (min-width: $tablet-width) {
-  .photo__wrap {
-    padding-left: 27px;
-    padding-right: 27px;
+  .photo__main-mark {
+    top: 54px;
+
+    @include wrap--desktop();
   }
 
-  .photo__mark {
-    top: 57px;
+  .photo__like {
+    padding-left: 0;
+    padding-right: 32px;
+    background-position-x: right;
+  }
+
+  .photo--main .photo__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photo--main .photo__text {
+    order: 5;
+    width: 100%;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .photo__mark {
-    width: $desktop-width;
-    top: 54px;
-    left: 50%;
-    transform: translateX(-50%);
+  .photo__main-mark {
+    top: 57px;
   }
 
-  .photo--main .photo__wrap {
-    width: 940px;
+  .photo--main .photo__info {
+    max-width: $desktop-width - $padding-hor-desktop * 2;
+
     margin: 0 auto;
+
+    @include wrap--desktop();
   }
 }

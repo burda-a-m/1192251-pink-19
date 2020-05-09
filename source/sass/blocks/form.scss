@@ -1,45 +1,39 @@
-/* Примись для placeholder */
-@mixin input-placeholder() {
-  ::-webkit-input-placeholder {
-    @content;
-  }
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  :-moz-placeholder {/* Firefox 18- */
-    @content;
-  }
-
-  ::-moz-placeholder {/* Firefox 19+ */
-    @content;
-  }
-
-  :-ms-input-placeholder {
-    @content;
-  }
+  margin: 0 auto;
+  padding: 0;
 }
-
-/* Оформляю placeholder */
-@include input-placeholder {
-  @include input--text();
-}
-
-/* --- */
-
-.form__wrap {
-  padding: 20px 0;
-}
-
-/* --- */
 
 .form__fieldset {
+  width: 100%;
+
   margin: 0;
-  padding: 35px 20px;
+  padding: 35px 0;
 
   border: none;
+
+  &--advances,
+  &--app {
+    background-color: $bg-gray;
+  }
+
+  order: $order;
+
+  &--persone,
+  &--advances {
+    order: 0;
+  }
+
+  &--contacts {
+    order: 1;
+  }
 }
 
-.form__fieldset--advances,
-.form__fieldset--app {
-  background-color: $bg-gray;
+.form__fieldset-wrap {
+  padding: 0 $padding-hor;
 }
 
 .form__legend {
@@ -47,7 +41,9 @@
   width: 100%;
 
   margin: 0 auto;
-  padding: 0 20px;
+
+  padding: 40px;
+  padding-top: 20px;
   padding-bottom: 35px;
 
   line-height: 18px;
@@ -57,12 +53,13 @@
 
   color: $call-to-action__color;
 
-  &--hidden {
-    @include visually-hidden();
+  &--persone,
+  &--contacts {
+    display: none;
   }
 }
 
-.form__label-caption {
+.form__label {
   display: block;
 
   padding-left: 18px;
@@ -78,8 +75,7 @@
 
   padding: 0 18px;
 
-  border: solid #e5e5e5 2px;
-
+  @include border-form-element();
   @include input--text();
 }
 
@@ -90,8 +86,43 @@
 
   padding: 18px;
 
-  border: solid #e5e5e5 2px;
+  background-color: #ffffff;
 
+  @include border-form-element();
+  @include input--text();
+}
+
+/* Оформляю placeholder */
+.form__input::-webkit-input-placeholder { /* webkit */
+  @include input--text();
+}
+
+.form__input:-moz-placeholder { /* Firefox 18- */
+  @include input--text();
+}
+
+.form__input::-moz-placeholder { /* Firefox 18+ */
+  @include input--text();
+}
+
+.form__input:-ms-input-placeholder { /* IE */
+  @include input--text();
+}
+
+/* * */
+.form__textarea::-webkit-input-placeholder { /* webkit */
+  @include input--text();
+}
+
+.form__textarea:-moz-placeholder { /* Firefox 18- */
+  @include input--text();
+}
+
+.form__textarea::-moz-placeholder { /* Firefox 18+ */
+  @include input--text();
+}
+
+.form__textarea:-ms-input-placeholder { /* IE */
   @include input--text();
 }
 
@@ -101,10 +132,16 @@
   font-size: 18px;
 }
 
-/* --- */
+.form__field {
+  padding: 10px 0;
+}
 
 .form__footer {
-  padding: 0 20px;
+  order: $order;
+
+  width: 100%;
+
+  padding: 0 $padding-hor;
 }
 
 .form__footnote {
@@ -114,4 +151,154 @@
 
 .form__warn {
   color: $call-to-action__color;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    @include wrap();
+  }
+
+  .form__fieldset {
+    order: 0;
+
+    width: 100%;
+    margin-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include border-form-element();
+
+    background-color: transparent;
+
+    &--persone {
+      padding: 0;
+
+      border: none;
+    }
+  }
+
+  .form__legend {
+    float: none;
+
+    width: auto;
+
+    padding: 0 $padding-hor;
+
+    &--contacts {
+      display: block;
+    }
+  }
+
+  .form__fieldset-wrap {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .form__fieldset-wrap--persone {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form__field--persone {
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 0;
+  }
+
+  .form__label--persone {
+    padding: 0;
+    padding-right: 20px;
+  }
+
+  .form__field--contacts {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .form__input--phone {
+    padding-right: 78px;
+
+    background-image: url("../img/icon-phone.svg"),
+      linear-gradient(to left, #e5e5e5 60px, transparent 60px);
+    background-repeat: no-repeat,
+      no-repeat;
+    background-position: right 20px center,
+      left top;
+    background-size: 20px, 100%;
+  }
+
+  .form__input--email {
+    padding-right: 78px;
+
+    background-image: url("../img/icon-mail.svg"),
+      linear-gradient(to left, #e5e5e5 60px, transparent 60px);
+    background-repeat: no-repeat,
+      no-repeat;
+    background-position: right 20px center,
+      left top;
+    background-size: 20px, 100%;
+  }
+
+  .form__footer {
+    order: 0;
+
+    display: flex;
+
+    padding: 0;
+  }
+
+  .form__submit {
+    display: block;
+    margin: 0;
+  }
+
+  .form__footnote {
+    margin: auto;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    max-width: $desktop-width;
+
+    @include wrap--desktop();
+  }
+
+  .form__legend {
+    padding: 0 40px;
+  }
+
+  .form__legend--app {
+    padding: 0 23px;
+  }
+
+  .form__fieldset--persone,
+  .form__fieldset--app {
+    width: 435px;
+  }
+
+  .form__fieldset-wrap--contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__field--contacts {
+    width: 371px;
+  }
+
+  .form__input--phone,
+  .form__input--email {
+    width: 100%;
+  }
+
+  .form__fieldset-wrap--advances {
+    column-count: 3;
+    column-gap: 40px;
+  }
 }

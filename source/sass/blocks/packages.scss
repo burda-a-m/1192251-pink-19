@@ -1,38 +1,51 @@
 .packages {
-  overflow-x: hidden;
+  padding: 0;
+  padding-top: 90px;
+  padding-bottom: 50px;
 
   background-color: $bg-gray;
 }
 
+.packages__slider {
+  position: static;
+}
+
+.packages__list {
+  margin-left: -100%; /* Сначала покажу пакет "Стандарт" */
+}
+
 .packages__variants {
   table-layout: fixed;
+  width: 300%;
 
-  width: calc(300% - 120px);
-  margin-left: calc(-100% + 60px);
+  white-space: normal;
 
+  border-spacing: 0;
   border-collapse: collapse;
-
-  background-color: #ffffff;
 }
 
 .packages__empty,
-.packeges__field {
+.packages__field {
   display: none;
 }
 
 .packages__header,
-.packeges__field,
-.packeges__result {
+.packages__field,
+.packages__result {
   border: #e5e5e5 solid 2px;
 }
 
-.packeges__field,
-.packeges__result {
+.packages__field,
+.packages__result {
   height: 59px;
+
+  background-color: #ffffff;
 }
 
 .packages__header {
-  padding: 15px 0;
+  height: 98px;
+
+  vertical-align: middle;
 
   font-size: 18px;
   font-weight: bold;
@@ -40,20 +53,30 @@
 
   color: #ffffff;
   background-color: $color;
+
+  &--hit {
+    background-image: url("../img/bg-hit--new.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
 }
 
 .packages__price {
   margin: 0;
+  margin-top: 10px;
 
   font-size: 24px;
   font-weight: 300;
 }
 
-.packeges__result {
+.packages__result {
   padding-left: 20px;
+  padding-right: 20px;
+
   vertical-align: middle;
 
-  background: right 20px center no-repeat;
+  background-position: right 20px center;
+  background-repeat: no-repeat;
   background-image: url("../img/icon-no.svg");
 
   &--yes {
@@ -62,9 +85,59 @@
   }
 }
 
-.packeges__field-retry {
+.packages__field-retry {
   display: inline-block;
 
   font-size: 14px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .packages__wrap {
+    max-width: $tablet-width;
+
+    @include wrap();
+  }
+
+  .packages__viewbox {
+    margin: 0;
+    padding: 0;
+  }
+
+  .packages__list {
+    margin-left: 0; /* При реализации сдвига слайдов на js тут придется поставить !important */
+  }
+
+  .packages__variants {
+    width: 100%;
+  }
+
+  .packages__field-retry {
+    display: none;
+  }
+
+  .packages__empty,
+  .packages__field {
+    display: table-cell;
+  }
+
+  .packages__result {
+    background-position: center;
+  }
+
+  .packages__toggle-list {
+    display: none;
+  }
+
+  .packages__header--hit {
+    background-image: url("../img/bg-hit-tablet--new.svg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .packages__wrap {
+    max-width: $desktop-width;
+
+    @include wrap--desktop();
+  }
 }

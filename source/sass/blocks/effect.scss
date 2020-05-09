@@ -8,13 +8,14 @@
   }
 
   .effect__wrap {
-    width: $tablet-width;
+    max-width: $tablet-width;
 
     @include wrap();
 
     background-image: url("../img/icon-timer--new.svg");
     background-position: $padding-hor 0;
     background-repeat: no-repeat;
+    background-size: 238px 276px;
   }
 
   .effect__title {
@@ -42,11 +43,14 @@
   }
 
   .effect__wrap {
-    width: $desktop-width;
+    max-width: $desktop-width;
+
+    @include wrap--desktop();
 
     padding-top: 50px;
     padding-bottom: 50px;
 
+    background-position: $padding-hor-desktop 0;
     background-size: 298px 345px;
   }
 

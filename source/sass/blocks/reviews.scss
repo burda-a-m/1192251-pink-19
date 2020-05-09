@@ -1,15 +1,122 @@
+.reviews {
+  padding: 70px 0;
+}
+
+.reviews__wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__viewbox {
+  padding: 0;
+}
+
+.reviews__item {
+  @include wrap();
+
+  text-align: center;
+}
+
+.reviews__item-wrap {
+  display: flex;
+  flex-direction: column;
+
+  width: $min-width-body - $padding-hor * 2;
+
+  margin: 0 auto;
+}
+
 .reviews__author-name {
   font-size: 18px;
   font-weight: bold;
   font-style: normal;
+
+  color: #000000;
 }
 
-.reviews__item {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+.reviews__author-info {
+  display: none;
 }
 
 .reviews__text {
+  position: relative;
+  height: 208px;
+
+  overflow: hidden;
+
   line-height: 30px;
+}
+
+.reviews__arrow {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__item-wrap {
+    width: $tablet-width - $padding-hor * 2;
+  }
+
+  .reviews__author-name {
+    font-size: 20px;
+  }
+
+  .reviews__author-info {
+    display: block;
+
+    font-size: 14px;
+  }
+
+  .reviews__text {
+    order: -1;
+
+    height: 125px;
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    padding-top: 200px;
+
+    background-image: url("../img/icon-quotes---new.svg");
+    background-repeat: no-repeat;
+    background-position: center 73px;
+  }
+
+  .reviews__wrap {
+    width: auto;
+    max-width: $desktop-width;
+
+    @include wrap();
+    @include wrap--desktop();
+  }
+
+  .reviews__author-name {
+    font-size: 24px;
+  }
+
+  .reviews__author-info {
+    display: block;
+
+    font-size: 18px;
+  }
+
+  .reviews__toggle-list {
+    display: none;
+  }
+
+  .reviews__arrow {
+    display: block;
+    position: absolute;
+    top: 60px;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
 }

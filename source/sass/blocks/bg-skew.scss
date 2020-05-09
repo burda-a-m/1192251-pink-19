@@ -1,0 +1,33 @@
+.bg-skew {
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.bg-skew::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  font-size: (33px / 2); /* Размер шрифта половина размера высоты скоса. */
+  border: 1em solid #ffffff;
+  border-left-width: 50vw;
+  border-right-width: 50vw;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  z-index: -1;
+}
+
+@media (min-width: $tablet-width) {
+  .bg-skew::after {
+    font-size: (51px / 2); /* Размер шрифта половина размера высоты скоса. */
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bg-skew::after {
+    font-size: (94px / 2); /* Размер шрифта половина размера высоты скоса. */
+  }
+}

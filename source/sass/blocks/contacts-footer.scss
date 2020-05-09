@@ -1,3 +1,9 @@
+.contacts-footer__block {
+  display: block;
+
+  text-align: center;
+}
+
 .contacts-footer__field {
   font-size: 18px;
   font-style: normal;
@@ -6,13 +12,47 @@
 }
 
 .contacts-footer__value {
-  display: block;
-
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
   text-decoration: none;
-  text-align: center;
 
   @include link-text();
+}
+
+.contacts-footer__map {
+  height: 200px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-footer__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include wrap();
+  }
+
+  .contacts-footer__block {
+    width: 50%;
+  }
+
+  .contacts-footer__map {
+    height: 375px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-footer__wrap {
+    max-width: $desktop-width;
+    padding: 0;
+  }
+
+  .contacts-footer__block {
+    width: 33.33%;
+  }
+
+  .contacts-footer__map {
+    height: 502px;
+  }
 }

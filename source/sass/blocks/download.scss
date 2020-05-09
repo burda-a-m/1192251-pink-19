@@ -1,22 +1,32 @@
 .download {
+  padding: 29px 0;
+
   background-color: #1d2631;
 }
 
-.download__os-list {
+.download__btn,
+.download__os-list,
+.download__info {
+  width: $min-width-body - $padding-hor * 2;
+  margin: 0 auto;
+
   text-align: center;
 }
 
-.download__info {
-  padding: 0;
-
-  text-align: center;
-
-  font-weight: lighter;
-  color: #ffffff;
+.download__os-list {
+  padding-top: 29px;
+  padding-bottom: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .download {
     background-color: transparent;
+  }
+
+  .download__btn,
+  .download__os-list,
+  .download__info {
+    display: block;
+    width: auto;
   }
 }

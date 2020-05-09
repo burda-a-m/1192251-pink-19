@@ -1,17 +1,16 @@
 .call-action {
-  padding: 0 20px;
-}
+  max-width: $min-width-body;
 
-.call-action__text {
+  @include wrap();
+
   line-height: 30px;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
-  .call-action__text {
-    width: 500px;
-
-    @include wrap();
+  .call-action {
+    width: auto;
+    max-width: $desktop-width;
 
     font-size: 18px;
   }

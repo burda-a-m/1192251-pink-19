@@ -1,10 +1,155 @@
-.form-filter__tools {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-filter {
+  background-color: $bg-gray;
+}
+
+.form-filter__canva {
+  max-width: $min-width-body - $padding-hor * 2;
+  margin: 0 auto;
 }
 
 .form-filter__picture {
   display: block;
+}
+
+.form-filter__tab-list {
+  max-width: $min-width-body - $padding-hor * 2;
   margin: 0 auto;
+
+  text-align: center;
+}
+
+.form-filter__tab {
+  width: 65px;
+  height: 48px;
+
+  background-color: transparent;
+  border: none;
+
+  color: $no-active__color;
+
+  &--active {
+    color: $call-to-action__color;
+  }
+}
+
+.form-filter__icon-tab {
+  width: 48px;
+  height: 48px;
+}
+
+.form-filter__label {
+  display: none;
+
+  width: 100%;
+
+  border-bottom: solid $reset__color 1px;
+
+  &--active {
+    display: block;
+  }
+}
+
+.form-filter__range {
+  width: 240px;
+  display: block;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.form-filter__buttons {
+  max-width: $min-width-body - $padding-hor * 2;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .form-filter {
+    display: flex;
+  }
+
+  .form-filter__canva {
+    max-width: none;
+    width: 300px;
+    margin: 0;
+  }
+
+  .form-filter__picture {
+    width: 100%;
+  }
+
+  .form-filter__tab-list {
+    display: none;
+  }
+
+  .form-filter__tools {
+    display: flex;
+    flex-direction: column;
+
+    width: 275px;
+    margin-left: auto;
+  }
+
+  .form-filter__label {
+    display: flex;
+
+    height: 56px;
+
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+
+    &--crop {
+      background-image: url("../img/icon-editor-crop.svg");
+    }
+
+    &--fill {
+      background-image: url("../img/icon-editor-fill.svg");
+    }
+
+    &--contrast {
+      background-image: url("../img/icon-editor-contrast.svg");
+    }
+  }
+
+  .form-filter__range {
+    width: 202px;
+  }
+
+  .form-filter__btn {
+    width: 260px;
+  }
+
+  .form-filter__buttons {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-filter__tools {
+    width: 410px;
+  }
+
+  .form-filter__label {
+    background-size: 45px;
+  }
+
+  .form-filter__range {
+    width: 290px;
+
+    margin: 0;
+    margin-left: 90px;
+  }
+
+  .form-filter__buttons {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: none;
+    width: 410px;
+  }
+
+  .form-filter__btn {
+    min-width: 185px;
+    width: auto;
+  }
 }
