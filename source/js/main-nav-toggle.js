@@ -1,3 +1,5 @@
+// Cкрипт работы мобильного меню.
+
 var main_nav = document.querySelector(".main-nav");
 var btn_nav_toggle = document.querySelector(".main-nav__toggle");
 
