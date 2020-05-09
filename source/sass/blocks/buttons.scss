@@ -4,7 +4,9 @@
   box-sizing: border-box;
 
   width: 100%;
-  line-height: 55px;
+  line-height: 27px;
+
+  padding: 12px 30px;
 
   text-align: center;
 
@@ -37,7 +39,16 @@
 .btn--send {
   border-radius: 2px;
 
+  text-transform: uppercase;
+
   color: #ffffff;
   background-color: #2aab6d;
   border-color: #2aab6d;
+}
+
+@media (min-width: $tablet-width) {
+  .btn {
+    display: inline-block;
+    width: auto;
+  }
 }

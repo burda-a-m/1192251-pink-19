@@ -5,36 +5,40 @@
     <title>Приложение Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаю Picturefill -->
+    <!--
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+    <!-- //Подключаю Picturefill -->
   </head>
-  <body class="index">
+  <body class="not-footer">
+
     <header class="page-header">
-
-      <section class="page-header__top">
-        <div class="page-header__top-wrap">
-
-          <div class="page-header__add-nav">
-            <a class="page-header__logo">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
+      <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__wrap">
+          <div class="main-nav__prev">
+            <a class="main-nav__logo">
+              <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
             </a>
-            <button class="page-header__nav-toggle"><span class="visually-hidden">Меню</span></button>
+            <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
           </div>
-
-          <nav class="page-header__nav main-nav">
+          <div class="main-nav__list">
             <a class="main-nav__item main-nav__item--active">Главная</a>
             <a class="main-nav__item" href="photo.html">Фотографии</a>
             <a class="main-nav__item" href="form.html">Конкурс</a>
             <a class="main-nav__item" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          </nav>
-
+          </div>
         </div>
-      </section>
-
+      </nav>
       <div class="page-header__bottom">
-        <div class="page-header__bottom-wrap">
-          <h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
+        <div class="page-header__bottom-wrap page-header__bottom-wrap--hand">
+          <h1 class="page-header__title page-header__title--hand">Взгляните на жизнь иначе!</h1>
           <section class="page-header__download download">
             <h2 class="visually-hidden">Загрузка приложения</h2>
-            <a class="btn btn--transparent" href="">Скачать приложение</a>
+            <a class="download__btn btn btn--transparent" href="">Скачать приложение</a>
             <div class="download__os-list">
               <a href="" class="download__os-link"><img src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
               <a href="" class="download__os-link"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
@@ -49,14 +53,13 @@
     </header>
 
     <main class="page-main">
-
       <section class="advantage">
         <header class="advantage__header offer">
           <h2 class="visually-hidden">Достоинства приложения</h2>
           <p class="offer__text">Устали от серости мегаполиса?</p>
           <p class="offer__text">Нам есть, что вам<br>предложить!</p>
         </header>
-        <div class="advantage__wrap-bg">
+        <div class="advantage__wrap-bg bg-skew">
           <ul class="advantage__list">
             <li class="advantage__item advantage__item--cheer">
               <h3 class="advantage__title">Поднимает настроение</h3>
@@ -98,116 +101,145 @@
 
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас</h2>
-        <div class="reviews__list slider">
-          <blockquote class="reviews__item slider__item slider__item--active">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__text">
-              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        <div class="reviews__wrap">
+          <div class="reviews__slider slider">
+            <div class="reviews__viewport slider__viewport">
+              <div class="reviews__viewbox slider__viewbox">
+                <div class="reviews__list slider__list"> <!-- Изменяя margin-left кратно -100% (отрицательное число), сдвигается влево/вправо содержимое слайдера -->
+                  <blockquote class="reviews__item slider__item">
+                    <div class="reviews__item-wrap">
+                      <cite class="reviews__author-name">Николай Петров</cite>
+                      <div class="reviews__author-info">25 лет, водитель трамвая</div>
+                      <p class="reviews__text">
+                        «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                      </p>
+                    </div>
+                  </blockquote>
+                  <blockquote class="reviews__item slider__item">
+                    <div class="reviews__item-wrap">
+                      <cite class="reviews__author-name">Иван Иванов</cite>
+                      <div class="reviews__author-info">45 лет, слесарь-сантехник</div>
+                      <p class="reviews__text">
+                        «Случайно в Интернете наткнулся на приложение Пинк. Описание его меня заинтересовало. Установил на смартфон. Оказалось, отличная небольшая программа...»
+                      </p>
+                    </div>
+                  </blockquote>
+                  <blockquote class="reviews__item slider__item">
+                    <div class="reviews__item-wrap">
+                      <cite class="reviews__author-name">Василий Васильев</cite>
+                      <div class="reviews__author-info">37 лет, электрик</div>
+                      <p class="reviews__text">
+                        «Данное приложение устанавливал маме. Пинк мама освоила на редкость быстро, причем сама. Просто показал ей функционал и теперь она сама справляется...»
+                      </p>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <button class="reviews__arrow reviews__arrow--left slider__arrow slider__arrow--left"><span class="visually-hidden">Назад</span></button>
+            <button class="reviews__arrow reviews__arrow--right slider__arrow slider__arrow--right"><span class="visually-hidden">Вперед</span></button>
+            <p class="reviews__toggle-list slider__toggle-list">
+              <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">Отзыв 1</span></button>
+              <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 2</span></button>
+              <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 3</span></button>
             </p>
-          </blockquote>
-          <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Иван Иванов</cite>
-            <p class="reviews__text">
-              «Случайно в Интернете наткнулся на приложение Пинк. Описание программы меня заинтересовало, решил испробовать её на деле. Установил на смартфон. Оказалось, отличная небольшая программа...»
-            </p>
-          </blockquote>
-          <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Василий Васильев</cite>
-            <p class="reviews__text">
-              «Данное приложение устанавливал маме. Оно оказалось удобным и простым — то, что ей нужно. К Пинк мама приспособилась на редкость быстро, причем сама. Просто показал ей функционал и теперь она сама справляется...»
-            </p>
-          </blockquote>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">Отзыв 1</span></button>
-            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 2</span></button>
-            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 3</span></button>
-          </p>
+          </div>
         </div>
       </section>
 
-      <section class="packages">
+      <section class="packages bg-skew">
         <h2 class="visually-hidden">Пакеты услуг</h2>
-        <table class="packages__variants">
-          <tr>
-            <td class="packages__empty">
-              &nbsp;
-            </td>
-            <th class="packages__header">
-              База
-              <p class="packages__price">1,99 USD</p>
-            </th>
-            <th class="packages__header packages__header--hit">
-              Стандарт
-              <p class="packages__price">3,99 USD</p>
-            </th>
-            <th class="packages__header">
-              Анлим
-              <p class="packages__price">3,99 USD</p>
-            </th>
-          </tr>
-          <tr>
-            <th class="packeges__field">
-              Розовый фильтр
-            </th>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Розовый фильтр</span>
-              <span class="visually-hidden">Есть</span>
-            </td>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Розовый фильтр</span>
-              <span class="visually-hidden">Есть</span>
-            </td>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Розовый фильтр</span>
-              <span class="visually-hidden">Есть</span>
-            </td>
-          </tr>
-          <tr>
-            <th class="packeges__field">
-              Смайлики
-            </th>
-            <td class="packeges__result">
-              <span class="packeges__field-retry">Смайлики</span>
-              <span class="visually-hidden">Нет</span>
-            </td>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Смайлики</span>
-              <span class="visually-hidden">Есть</span>
-            </td>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Смайлики</span>
-              <span class="visually-hidden">Есть</span>
-            </td>
-          </tr>
-          <tr>
-            <th class="packeges__field">
-              Комментарии
-            </th>
-            <td class="packeges__result">
-              <span class="packeges__field-retry">Комментарии</span>
-              <span class="visually-hidden">Нет</span>
-            </td>
-            <td class="packeges__result">
-              <span class="packeges__field-retry">Комментарии</span>
-              <span class="visually-hidden">Нет</span>
-            </td>
-            <td class="packeges__result packeges__result--yes">
-              <span class="packeges__field-retry">Комментарии</span>
-                <span class="visually-hidden">Есть</span>
-            </td>
-          </tr>
-        </table>
-        <p class="packages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">
-            <span class="visually-hidden">Слайд №1</span>
-          </button>
-          <button class="slider__toggle slider__toggle--active" type="button">
-            <span class="visually-hidden">Слайд №2</span>
-          </button>
-          <button class="slider__toggle" type="button">
-            <span class="visually-hidden">Слайд №3</span>
-          </button>
-        </p>
+        <div class="packages__wrap">
+          <div class="packages__slider slider">
+            <div class="packages__viewport slider__viewport">
+              <div class="packages__viewbox slider__viewbox">
+                <div class="packages__list slider__list"> <!-- Изменяя margin-left кратно -100% (отрицательное число), сдвигается влево/вправо содержимое слайдера -->
+                  <table class="packages__variants">
+                    <tr>
+                      <td class="packages__empty">
+                        &nbsp;
+                      </td>
+                      <th class="packages__header">
+                        База
+                        <p class="packages__price">1,99 USD</p>
+                      </th>
+                      <th class="packages__header packages__header--hit">
+                        Стандарт
+                        <p class="packages__price">3,99 USD</p>
+                      </th>
+                      <th class="packages__header">
+                        Анлим
+                        <p class="packages__price">3,99 USD</p>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="packages__field">
+                        Розовый фильтр
+                      </th>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Розовый фильтр</span>
+                        <span class="visually-hidden">Есть</span>
+                      </td>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Розовый фильтр</span>
+                        <span class="visually-hidden">Есть</span>
+                      </td>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Розовый фильтр</span>
+                        <span class="visually-hidden">Есть</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="packages__field">
+                        Смайлики
+                      </th>
+                      <td class="packages__result">
+                        <span class="packages__field-retry">Смайлики</span>
+                        <span class="visually-hidden">Нет</span>
+                      </td>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Смайлики</span>
+                        <span class="visually-hidden">Есть</span>
+                      </td>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Смайлики</span>
+                        <span class="visually-hidden">Есть</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="packages__field">
+                        Комментарии
+                      </th>
+                      <td class="packages__result">
+                        <span class="packages__field-retry">Комментарии</span>
+                        <span class="visually-hidden">Нет</span>
+                      </td>
+                      <td class="packages__result">
+                        <span class="packages__field-retry">Комментарии</span>
+                        <span class="visually-hidden">Нет</span>
+                      </td>
+                      <td class="packages__result packages__result--yes">
+                        <span class="packages__field-retry">Комментарии</span>
+                          <span class="visually-hidden">Есть</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <p class="packages__toggle-list slider__toggle-list">
+              <button class="slider__toggle" type="button">
+                <span class="visually-hidden">Слайд №1</span>
+              </button>
+              <button class="slider__toggle slider__toggle--active" type="button">
+                <span class="visually-hidden">Слайд №2</span>
+              </button>
+              <button class="slider__toggle" type="button">
+                <span class="visually-hidden">Слайд №3</span>
+              </button>
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="contacts-footer">
@@ -218,25 +250,30 @@
             Свяжитесь с нами!
           </p>
         </div>
-        <address class="contacts-footer__block">
-          <p class="contacts-footer__field">Звоните:</p>
-          <a href="tel:+78125556666" class="contacts-footer__value">+7 (812) 555-66-66</a>
-        </address>
-        <address class="contacts-footer__block">
-          <p class="contacts-footer__field">Пишите:</p>
-          <a href="mailto:mail@htmlacademy.ru" class="contacts-footer__value">mail@htmlacademy.ru</a>
-        </address>
-        <address class="contacts-footer__block">
-          <p class="contacts-footer__field">Приезжайте в гости:</p>
-          <p class="contacts-footer__value">
-            ул. Большая<br>
-            Конюшенная, 19/8
-          </p>
-        </address>
-        <div class="contacts-footer__map map">
-          <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991036590476!2d30.32178190113365!3d59.93879419359227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1578918454797!5m2!1sru!2sby" width="320" height="200" allowfullscreen></iframe>
-
+        <div class="contacts-footer__wrap">
+          <address class="contacts-footer__block">
+            <p class="contacts-footer__field">Звоните:</p>
+            <a href="tel:+78125556666" class="contacts-footer__value">+7 (812) 555-66-66</a>
+          </address>
+          <address class="contacts-footer__block">
+            <p class="contacts-footer__field">Пишите:</p>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts-footer__value">mail@htmlacademy.ru</a>
+          </address>
+          <address class="contacts-footer__block">
+            <p class="contacts-footer__field">Приезжайте в гости:</p>
+            <p class="contacts-footer__value">
+              ул. Большая<br>
+              Конюшенная, 19/8
+            </p>
+          </address>
+        </div>
+        <div class="contacts-footer__map bg-triangle map">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x---new.jpg 1x, img/bg-map-desktop@2x---new.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x---new.jpg 1x, img/bg-map-tablet@2x---new.jpg 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x---new.png" srcset="img/bg-map-mobile@1x---new.png 1x, img/bg-map-mobile@2x---new.jpg 2x" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
+          </picture>
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f1f9ac978b965c41da787348b7c8c1dd845be253d4df7f98cf6754bfb704dc2&amp;source=constructor" width="320" height="200" frameborder="0"></iframe>
         </div>
       </section>
     </main>

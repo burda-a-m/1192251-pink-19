@@ -1,5 +1,5 @@
 .bonus {
-  padding: 0 20px;
+  @include wrap();
 }
 
 .bonus__text {
@@ -7,16 +7,31 @@
   text-align: center;
 }
 
+.bonus__text-add {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
-  .bonus__text {
+  .bonus {
     width: 500px;
 
-    @include wrap();
+    padding-left: 0;
+    padding-right: 0;
 
     font-size: 18px;
   }
 
-  .bonus__br-text {
-    display: none;
+  .bonus__text-add {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bonus {
+    width: 780px;
+  }
+
+  .bonus__text-add {
+    display: inline;
   }
 }

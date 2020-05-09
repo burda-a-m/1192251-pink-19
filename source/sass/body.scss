@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: $min-width-body;
+
   margin: 0;
   padding: 0;
 

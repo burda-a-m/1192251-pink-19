@@ -5,31 +5,34 @@
     <title>Фотографии пользователей - Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаю Picturefill -->
+    <!--
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+    <!-- //Подключаю Picturefill -->
   </head>
   <body>
 
     <header class="page-header">
-
-      <section class="page-header__top">
-        <div class="page-header__top-wrap">
-
-          <div class="page-header__add-nav">
-            <a class="page-header__logo" href="index.html">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
+      <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__wrap">
+          <div class="main-nav__prev">
+            <a class="main-nav__logo">
+              <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
             </a>
-            <button class="page-header__nav-toggle"><span class="visually-hidden">Меню</span></button>
+            <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
           </div>
-
-          <nav class="page-header__nav main-nav">
+          <div class="main-nav__list">
             <a class="main-nav__item" href="index.html">Главная</a>
             <a class="main-nav__item main-nav__item--active">Фотографии</a>
             <a class="main-nav__item" href="form.html">Конкурс</a>
             <a class="main-nav__item" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          </nav>
-
+          </div>
         </div>
-      </section>
-
+      </nav>
       <div class="page-header__bottom">
         <div class="page-header__bottom-wrap">
           <h1 class="page-header__title">Фотографии пользователей</h1>
@@ -49,18 +52,18 @@
         <h2 class="visually-hidden">Лучшие снимки на сегодня</h2>
         <article class="photo-list__item photo-list__item--main photo photo--main">
           <a class="photo__link" href="">
+            <div class="photo__main-mark"></div>
             <picture>
-              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg">
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
-              <img class="photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Автор фото: Анна">
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@1x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Автор фото: Анна">
             </picture>
-            <span class="photo__mark"></span>
           </a>
-          <div class="photo__wrap">
-            <div class="photo__header">
+          <div class="photo__info">
+            <header class="photo__header">
               <strong class="photo__author">Анна</strong>
               <time class="photo__date" datetime="2020-03-29">(5 минут назад)</time>
-            </div>
+            </header>
             <p class="photo__text">
               Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
             </p>
@@ -71,16 +74,16 @@
           <article class="photo-list__item photo">
             <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Левон">
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Левон">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
+            <div class="photo__info">
+              <header class="photo__header">
                 <strong class="photo__author">Левон</strong>
                 <time class="photo__date" datetime="2020-03-29">(5 часов назад)</time>
-              </div>
+              </header>
               <p class="photo__text">
                 Вчера он на луну летал, сегодня в руки к нам попал.
               </p>
@@ -90,97 +93,97 @@
           <article class="photo-list__item photo">
             <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Антон">
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Антон">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
+            <div class="photo__info">
+              <header class="photo__header">
                 <strong class="photo__author">Антон</strong>
                 <time class="photo__date" datetime="2020-03-28">(12 часов назад)</time>
-              </div>
+              </header>
               <p class="photo__text">
                 Соседи будут рады!
               </p>
-              <a href="" class="photo__like">Нравится: 666</a>
+              <a class="photo__like" href="">Нравится: 666</a>
             </div>
           </article>
           <article class="photo-list__item photo">
-            <a href="" class="photo__link">
+            <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Борис">
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Борис">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
-                <strong class="photo__author">Борис</strong>
-                <time class="photo__date" datetime="2020-03-28">(20 часов назад)</time>
-              </div>
-              <p class="photo__text">
-                Здесь могла быть ваша цитата о высоком и вечном.
-              </p>
-              <a href="" class="photo__like">Нравится: 215</a>
-            </div>
+            <div class="photo__info">
+            <header class="photo__header">
+              <strong class="photo__author">Борис</strong>
+              <time class="photo__date" datetime="2020-03-28">(20 часов назад)</time>
+            </header>
+            <p class="photo__text">
+              Здесь могла быть ваша цитата о высоком и вечном.
+            </p>
+            <a class="photo__like" href="">Нравится: 215</a>
+          </div>
           </article>
           <article class="photo-list__item photo">
-            <a href="" class="photo__link">
+            <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Сергей">
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Сергей">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
-                <strong class="photo__author">Сергей</strong>
-                <time class="photo__date" datetime="2020-03-28">(25 часов назад)</time>
-              </div>
-              <p class="photo__text">
-                Самая кубанская в мире!
-              </p>
-              <a href="" class="photo__like">Нравится: 4</a>
-            </div>
+            <div class="photo__info">
+            <header class="photo__header">
+              <strong class="photo__author">Сергей</strong>
+              <time class="photo__date" datetime="2020-03-28">(25 часов назад)</time>
+            </header>
+            <p class="photo__text">
+              Самая кубанская в мире!
+            </p>
+            <a class="photo__like" href="">Нравится: 4</a>
+          </div>
           </article>
           <article class="photo-list__item photo">
-            <a href="" class="photo__link">
+            <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Максим">
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Максим">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
-                <strong class="photo__author">Максим</strong>
-                <time class="photo__date" datetime="2020-03-27">(40 часов назад)</time>
-              </div>
-              <p class="photo__text">
-                Где снег-то?
-              </p>
-              <a href="" class="photo__like">Нравится: 150</a>
-            </div>
+            <div class="photo__info">
+            <header class="photo__header">
+              <strong class="photo__author">Максим</strong>
+              <time class="photo__date" datetime="2020-03-27">(40 часов назад)</time>
+            </header>
+            <p class="photo__text">
+              Где снег-то?
+            </p>
+            <a class="photo__like" href="">Нравится: 150</a>
+          </div>
           </article>
           <article class="photo-list__item photo">
-            <a href="" class="photo__link">
+            <a class="photo__link" href="">
               <picture>
-                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
-                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Автор фото: Надежда">
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Надежда">
               </picture>
             </a>
-            <div class="photo__wrap">
-              <div class="photo__header">
-                <strong class="photo__author">Надежда</strong>
-                <time class="photo__date" datetime="2020-03-27">(45 часов назад)</time>
-              </div>
-              <p class="photo__text">
-                Всем GM и взаимные лайки!
-              </p>
-              <a href="" class="photo__like">Нравится: 2560</a>
-            </div>
+            <div class="photo__info">
+            <header class="photo__header">
+              <strong class="photo__author">Надежда</strong>
+              <time class="photo__date" datetime="2020-03-27">(45 часов назад)</time>
+            </header>
+            <p class="photo__text">
+              Всем GM и взаимные лайки!
+            </p>
+            <a class="photo__like" href="">Нравится: 2560</a>
+          </div>
           </article>
         </div>
       </section>
@@ -194,43 +197,51 @@
       </section>
 
       <section class="photofilter">
-        <h2 class="visually-hidden">Фильтр</h2>
-        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="visually-hidden">Фотофильтр</h2>
+        <form class="photofilter__form form-filter" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form-filter__canva">
-            <img class="form-filter__picture" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Редактируемая картинка">
+            <picsture>
+              <source madia="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source madia="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="form-filter__picture" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Редактируемая картинка">
+            </picsture>
           </div>
-          <div class="form-filter__tools tools">
-            <div class="tools__tabs-list">
-              <button class="tools__tab tools__tab--active">
-                <svg class="tools__icon-tab">
-                  <use xlink:href="img/icon-editor-crop.svg#icon-svg"></use>
+          <div class="form-filter__tools">
+            <div class="form-filter__tab-list">
+              <button class="form-filter__tab form-filter__tab--active">
+                <span class="visually-hidden">Обрезать</span>
+                <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/icon-editor---sprite.svg#icon-crop"></use>
                 </svg>
               </button>
-              <button class="tools__tab">
-                <svg class="tools__icon-tab">
-                  <use xlink:href="img/icon-editor-fill.svg#icon-svg"></use>
+              <button class="form-filter__tab">
+                <span class="visually-hidden">Залить</span>
+                <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/icon-editor---sprite.svg#icon-fill"></use>
                 </svg>
               </button>
-              <button class="tools__tab">
-                <svg class="tools__icon-tab">
-                  <use xlink:href="img/icon-editor-contrast.svg#icon-svg"></use>
+              <button class="form-filter__tab">
+                <span class="visually-hidden">Контраст</span>
+                <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/icon-editor---sprite.svg#icon-contrast"></use>
                 </svg>
               </button>
             </div>
-            <!-- -->
-            <div class="tools__wrap tools__wrap--crop tools__wrap--active">
-              <input class="tools__range" type="range" name="crop" min="0" max="100" value="50">
+            <div class="form-filter__list-ranges">
+              <label class="form-filter__label form-filter__label--crop form-filter__label--active">
+                <input class="form-filter__range" type="range" name="crop" min="0" max="100" value="50">
+              </label>
+              <label class="form-filter__label form-filter__label--fill">
+                <input class="form-filter__range" type="range" name="fill" min="0" max="100" value="50">
+              </label>
+              <label class="form-filter__label form-filter__label--contrast">
+                <input class="form-filter__range" type="range" name="contrast" min="0" max="100" value="50">
+              </label>
             </div>
-            <div class="tools__wrap tools__wrap--fill">
-              <input class="tools__range" type="range" name="fill" min="0" max="100" value="50">
+            <div class="form-filter__buttons">
+              <button class="form-filter__btn btn" type="submit">Запостить</button>
+              <button class="form-filter__btn btn btn--reset" type="reset">Отмена</button>
             </div>
-            <div class="tools__wrap tools__wrap--contrasr">
-              <input class="tools__range" type="range" name="contrast" min="0" max="100" value="50">
-            </div>
-          </div>
-          <div class="form-filter__buttons">
-            <button class="btn" type="submit">Запостить</button>
-            <button class="btn btn--reset" type="reset">Отмена</button>
           </div>
         </form>
       </section>

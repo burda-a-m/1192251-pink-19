@@ -28,20 +28,40 @@
   }
 }
 
-@mixin input--text() {
-  font-family: $font-family;
-  font-size: 18px;
-  font-weight: $font-weight-text;
-  color: $color;
+/*
+@mixin bg-section-triangle() {
+  background-color: $bg-gray;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 }
+*/
 
 @mixin wrap() {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 $padding-hor;
+}
+
+@mixin wrap--desktop() {
+  padding-left: $padding-hor-desktop;
+  padding-right: $padding-hor-desktop;
 }
 
 @mixin list-reset() {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin border-form-element() {
+  border: solid #e5e5e5 2px;
+  border-radius: 2px;
+}
+
+@mixin input--text() {
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: $font-weight-text;
+  color: $color;
 }
