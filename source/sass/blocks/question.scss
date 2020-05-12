@@ -2,19 +2,25 @@
   display: flex;
   align-items: center;
 
-  min-height: 187px;
-  padding: 40px 20px;
+  min-height: 184px;
+  padding: 30px 20px;
 }
 
 .question__text {
   width: 250px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
 
   line-height: 30px;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
+  .question {
+    min-height: 228px;
+    padding-top: 48px;
+  }
+
   .question__text {
     width: 500px;
 
@@ -25,6 +31,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .question {
+    min-height: 240px;
+    padding-top: 33px;
+  }
+
   .question__text {
     width: 620px;
   }

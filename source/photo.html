@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <!-- Подключаю Picturefill -->
-    <!--
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement( "picture" );
-    </script>
-    <script src="js/picturefill.min.js" async></script>
-    <!-- //Подключаю Picturefill -->
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
 
@@ -20,7 +14,7 @@
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrap">
           <div class="main-nav__prev">
-            <a class="main-nav__logo">
+            <a class="main-nav__logo" href="index.html">
               <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
             </a>
             <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
@@ -35,7 +29,8 @@
       </nav>
       <div class="page-header__bottom">
         <div class="page-header__bottom-wrap">
-          <h1 class="page-header__title">Фотографии пользователей</h1>
+          <h1 class="page-header__title">Фотографии<br>
+          пользователей</h1>
         </div>
       </div>
     </header>
@@ -56,7 +51,7 @@
             <picture>
               <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@1x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-              <img class="photo__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Автор фото: Анна">
+              <img class="photo__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Автор фото: Анна">
             </picture>
           </a>
           <div class="photo__info">
@@ -76,7 +71,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Левон">
+                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Левон">
               </picture>
             </a>
             <div class="photo__info">
@@ -95,7 +90,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Антон">
+                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Антон">
               </picture>
             </a>
             <div class="photo__info">
@@ -114,7 +109,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Борис">
+                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Борис">
               </picture>
             </a>
             <div class="photo__info">
@@ -133,7 +128,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Сергей">
+                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Сергей">
               </picture>
             </a>
             <div class="photo__info">
@@ -152,7 +147,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Максим">
+                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Максим">
               </picture>
             </a>
             <div class="photo__info">
@@ -171,7 +166,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@12x.jpg 2x" width="280" height="180" alt="Автор фото: Надежда">
+                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Автор фото: Надежда">
               </picture>
             </a>
             <div class="photo__info">
@@ -203,7 +198,7 @@
             <picsture>
               <source madia="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
               <source madia="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <img class="form-filter__picture" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Редактируемая картинка">
+              <img class="form-filter__picture" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Редактируемая картинка">
             </picsture>
           </div>
           <div class="form-filter__tools">

@@ -9,17 +9,22 @@
 
   .effect__wrap {
     max-width: $tablet-width;
+    min-height: 334px;
 
     @include wrap();
 
+    padding-top: 96px;
+
     background-image: url("../img/icon-timer--new.svg");
-    background-position: $padding-hor 0;
+    background-position: $padding-hor 59px;
     background-repeat: no-repeat;
     background-size: 238px 276px;
   }
 
   .effect__title {
+    margin: 0;
     margin-left: 50%;
+    margin-bottom: 10px;
 
     line-height: 36px;
 
@@ -29,7 +34,9 @@
   }
 
   .effect__text {
+    margin: 0;
     margin-left: 50%;
+    margin-bottom: 11px;
   }
 
   .effect__link {

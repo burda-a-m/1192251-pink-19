@@ -1,24 +1,14 @@
-.photo-list {
-  max-width: $min-width-body;
-  margin: 0 auto;
-}
-
 .photo-list__grid {
+  max-width: $min-width-body;
+
   @include wrap();
 }
 
 .photo-list__item {
-  margin: 0;
   margin-bottom: 19px;
-
-  padding: 0;
 }
 
 @media (min-width: $tablet-width) {
-  .photo-list {
-    max-width: $tablet-width;
-  }
-
   .photo-list__grid {
     display: flex;
     flex-wrap: wrap;
@@ -30,32 +20,19 @@
 
   .photo-list__item {
     width: 50%;
-    min-height: 453px;
-    /** В реальном проекте высоту не указывал бы.
-        Но чтобы обеспечить Перфектпиксел укажу */
-    margin-bottom: 22px;
     padding-left: $padding-hor-desktop;
     padding-right: $padding-hor-desktop;
   }
 
   .photo-list__item--main {
     width: 100%;
-
     margin-bottom: 50px;
-
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .photo-list {
-    width: auto;
-    max-width: $photo-main-width;
-
-    margin: 0 auto;
-  }
-
   .photo-list__grid {
     max-width: $desktop-width;
 

@@ -28,16 +28,6 @@
   }
 }
 
-/*
-@mixin bg-section-triangle() {
-  background-color: $bg-gray;
-  background-image: url("../img/bg-triangle-white.svg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
-}
-*/
-
 @mixin wrap() {
   margin: 0 auto;
   padding: 0 $padding-hor;

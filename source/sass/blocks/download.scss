@@ -1,5 +1,7 @@
 .download {
-  padding: 29px 0;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 30px;
 
   background-color: #1d2631;
 }
@@ -14,8 +16,21 @@
 }
 
 .download__os-list {
-  padding-top: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  padding-top: 31px;
   padding-bottom: 15px;
+}
+
+.download__os-link {
+  display: block;
+  margin: 0 18px;
+}
+
+.download__info {
+  font-weight: lighter;
 }
 
 @media (min-width: $tablet-width) {
@@ -23,10 +38,33 @@
     background-color: transparent;
   }
 
-  .download__btn,
-  .download__os-list,
+  .download__btn {
+    display: block;
+    width: auto;
+  }
+
   .download__info {
     display: block;
     width: auto;
+
+    font-size: 18px;
+  }
+
+  .download__os-list {
+    width: auto;
+    padding-top: 42px;
+    padding-bottom: 31px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download__btn {
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .download__os-list {
+    padding-top: 64px;
+    padding-bottom: 49px;
   }
 }
