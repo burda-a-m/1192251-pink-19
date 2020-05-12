@@ -1,4 +1,6 @@
 .copyright {
+  padding-top: 8px;
+
   font-size: 14px;
 }
 
@@ -10,9 +12,15 @@
 }
 
 .copyright__link {
-  margin-left: 15px;
+  margin-left: 11px;
 
   path {
     fill: $call-to-action__color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    font-size: 18px;
   }
 }

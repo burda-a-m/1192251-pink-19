@@ -21,23 +21,23 @@
   background-size: cover;
 }
 
-
 .page-header__title {
   min-height: 170px;
 
   @include wrap();
 
-  padding-top: 35px;
+  padding-top: 28px;
   padding-bottom: 20px;
 
-  line-height: normal;
+  line-height: 30px;
 
   font-size: 24px;
   font-weight: lighter;
   text-align: center;
 
   &--hand {
-    padding-bottom: 300px;
+    padding-top: 22px;
+    padding-bottom: 313px;
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: calc(50% - 30px) bottom;
@@ -59,11 +59,16 @@
   }
 
   .page-header__title {
-    min-height: 330px;
+    max-width: 500px;
+    min-height: 328px;
 
-    padding: 80px 0;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 30px;
 
-    font-size: 40px;
+    line-height: 59px;
+
+    font-size: 50px;
 
     background-image: none;
   }
@@ -73,22 +78,27 @@
     min-height: 0;
 
     margin-left: 0;
-    padding: 0;
+    padding: 0 30px;
+
+    line-height: 48px;
+
+    font-size: 40px;
   }
 
   .page-header__download {
     width: 300px;
 
     margin-left: 0;
+    margin-top: 5px;
   }
 
   .page-header__bottom-wrap--hand {
-    min-height: 620px;
+    min-height: 617px;
 
-    padding-top: 75px;
+    padding-top: 91px;
 
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: right bottom;
+    background-position: right -20px bottom;
     background-repeat: no-repeat;
   }
 }
@@ -108,9 +118,16 @@
     min-height: 743px;
 
     background-image: url("../img/iphone-hand-desktop@1x--new.png");
+    background-position: right 50px bottom;
   }
 
   .page-header__title {
+    max-width: 760px;
+    min-height: 217px;
+
+    padding-top: 15px;
+
     font-size: 50px;
+    line-height: 60px;
   }
 }

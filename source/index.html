@@ -6,15 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <!-- Подключаю Picturefill -->
-    <!--
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement( "picture" );
-    </script>
-    <script src="js/picturefill.min.js" async></script>
-    <!-- //Подключаю Picturefill -->
-  </head>
-  <body class="not-footer">
+    <script src="js/picturefill.min.js"></script>
+  <body class="not-footer-mobile">
 
     <header class="page-header">
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
@@ -40,9 +33,9 @@
             <h2 class="visually-hidden">Загрузка приложения</h2>
             <a class="download__btn btn btn--transparent" href="">Скачать приложение</a>
             <div class="download__os-list">
-              <a href="" class="download__os-link"><img src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
-              <a href="" class="download__os-link"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
-              <a href="" class="download__os-link"><img src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
+              <a href="" class="download__os-link"><img class="download__os-image" src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
+              <a href="" class="download__os-link"><img class="download__os-image" src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
+              <a href="" class="download__os-link"><img class="download__os-image" src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
             </div>
             <p class="download__info">
               Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -271,7 +264,7 @@
           <picture>
             <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x---new.jpg 1x, img/bg-map-desktop@2x---new.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x---new.jpg 1x, img/bg-map-tablet@2x---new.jpg 2x">
-            <img class="map__img" src="img/bg-map-mobile@1x---new.png" srcset="img/bg-map-mobile@1x---new.png 1x, img/bg-map-mobile@2x---new.jpg 2x" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
+            <img class="map__img" src="img/bg-map-mobile@1x---new.png" srcset="img/bg-map-mobile@2x---new.jpg 2x" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
           </picture>
           <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f1f9ac978b965c41da787348b7c8c1dd845be253d4df7f98cf6754bfb704dc2&amp;source=constructor" width="320" height="200" frameborder="0"></iframe>
         </div>
@@ -300,5 +293,7 @@
         </a>
       </p>
     </footer>
+
+    <script src="js/main-nav-toggle.js"></script>
   </body>
 </html>
