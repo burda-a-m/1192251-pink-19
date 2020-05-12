@@ -9,11 +9,13 @@
 
   .effect__wrap {
     max-width: $tablet-width;
-    min-height: 334px;
+    min-height: 387px;
 
     @include wrap();
 
     padding-top: 96px;
+    padding-bottom: 52px;
+    padding-left: 50%;
 
     background-image: url("../img/icon-timer--new.svg");
     background-position: $padding-hor 59px;
@@ -23,7 +25,6 @@
 
   .effect__title {
     margin: 0;
-    margin-left: 50%;
     margin-bottom: 10px;
 
     line-height: 36px;
@@ -35,7 +36,6 @@
 
   .effect__text {
     margin: 0;
-    margin-left: 50%;
     margin-bottom: 11px;
   }
 
@@ -54,11 +54,16 @@
 
     @include wrap--desktop();
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 123px;
+    padding-bottom: 113px;
+    padding-left: 375px;
 
-    background-position: $padding-hor-desktop 0;
+    background-position: $padding-hor-desktop 33px;
     background-size: 298px 345px;
+  }
+
+  .effect__title {
+    margin-bottom: 22px;
   }
 
   .effect__br-title {
@@ -68,6 +73,12 @@
   .effect__text {
     line-height: 30px;
 
+    margin-bottom: 33px;
+
+    font-size: 18px;
+  }
+
+  .effect__link {
     font-size: 18px;
   }
 }
