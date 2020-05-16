@@ -22,6 +22,8 @@
   border: solid 3px $call-to-action__color;
 
   margin: 5px 0;
+
+  cursor: pointer;
 }
 
 .btn--reset {
@@ -37,6 +39,8 @@
 }
 
 .btn--send {
+  padding: 15px 17px;
+
   border-radius: 2px;
 
   text-transform: uppercase;

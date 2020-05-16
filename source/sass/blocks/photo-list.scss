@@ -9,9 +9,13 @@
 
 .photo-list__item {
   margin: 0;
-  margin-bottom: 19px;
+  margin-top: 19px;
 
   padding: 0;
+}
+
+.photo-list__item--main {
+  margin-top: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -30,10 +34,7 @@
 
   .photo-list__item {
     width: 50%;
-    min-height: 453px;
-    /** В реальном проекте высоту не указывал бы.
-        Но чтобы обеспечить Перфектпиксел укажу */
-    margin-bottom: 22px;
+    margin-top: 21px;
     padding-left: $padding-hor-desktop;
     padding-right: $padding-hor-desktop;
   }
@@ -41,7 +42,8 @@
   .photo-list__item--main {
     width: 100%;
 
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 28px;
 
     padding-left: 0;
     padding-right: 0;
@@ -65,11 +67,15 @@
 
   .photo-list__item {
     width: 33.333%;
-    margin-bottom: 54px;
+
+    margin-top: 54px;
   }
 
   .photo-list__item--main {
     width: 100%;
-    margin-bottom: 50px;
+    max-width: $photo-main-width;
+
+    margin-top: 0;
+    margin-bottom: -5px;
   }
 }

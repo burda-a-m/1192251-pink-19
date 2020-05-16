@@ -1,5 +1,8 @@
 .bonus {
   @include wrap();
+
+  padding-top: 45px;
+  padding-bottom: 37px;
 }
 
 .bonus__text {
@@ -7,7 +10,7 @@
   text-align: center;
 
   margin: 0;
-  padding: 45px 0;
+  padding: 0;
 }
 
 .bonus__text-add {
@@ -20,6 +23,8 @@
 
     padding-left: 0;
     padding-right: 0;
+    padding-top: 91px;
+    padding-bottom: 72px;
 
     font-size: 18px;
   }

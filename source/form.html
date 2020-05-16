@@ -3,13 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Конкурс: подача заявки - Пинк</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
     <!-- Подключаю Picturefill -->
     <script src="js/picturefill.min.js"></script>
+
+    <!-- Подключаю svg4everybody -->
+    <script src="js/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody(); // run it now or whenever you are ready
+    </script>
+    <!-- /// -->
   </head>
   <body>
-
     <header class="page-header">
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrap">
@@ -49,33 +59,33 @@
             <div class="form__fieldset-wrap form__fieldset-wrap--persone">
               <div class="form__field form__field--persone">
                 <label for="last-name" class="form__label form__label--persone">Фамилия:</label>
-                <input type="text" class="form__input" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+                <input type="text" class="form__input input-text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
               </div>
               <div class="form__field form__field--persone">
                 <label for="name" class="form__label form__label--persone">Имя:</label>
-                <input type="text" class="form__input" id="name" name="name" placeholder="Укажите имя *" required>
+                <input type="text" class="form__input input-text" id="name" name="name" placeholder="Введите ваше имя *" required>
               </div>
               <div class="form__field form__field--persone">
                 <label for="second-name" class="form__label form__label--persone">Отчество:</label>
-                <input type="text" class="form__input" id="second-name" name="second-name" placeholder="Ну и отчество тоже">
+                <input type="text" class="form__input input-text" id="second-name" name="second-name" placeholder="Ну и отчество тоже">
               </div>
             </div>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--app">
             <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
-            <div class="form__fieldset-wrap">
-              <div class="form__field form__field--app">
-                <input class="form__radio" type="radio" id="app-ios" name="app" value="Pink для iOS">
-                <label class="form__label-value" for="app-ios">Pink для iOS</label>
+            <div class="form__fieldset-wrap form__fieldset-wrap--app">
+              <div class="form__field form__field--app input-radio">
+                <input class="form__radio input-radio__radio" type="radio" id="app-ios" name="app" value="Pink для iOS" checked>
+                <label class="form__label-value input-radio__label" for="app-ios">Pink для iOS</label>
               </div>
-              <div class="form__field form__field--app">
-                <input class="form__radio" type="radio" id="app-android" name="app" value="Pink на Android" checked>
-                <label class="form__label-value" for="app-android">Pink на Android</label>
+              <div class="form__field form__field--app input-radio">
+                <input class="form__radio input-radio__radio" type="radio" id="app-android" name="app" value="Pink на Android">
+                <label class="form__label-value input-radio__label" for="app-android">Pink на Android</label>
               </div>
-              <div class="form__field form__field--app">
-                <input class="form__radio" type="radio" id="app-windows" name="app" value="Windows Phone">
-                <label class="form__label-value" for="app-windows">Windows Phone</label>
+              <div class="form__field form__field--app input-radio">
+                <input class="form__radio input-radio__radio" type="radio" id="app-windows" name="app" value="Windows Phone">
+                <label class="form__label-value input-radio__label" for="app-windows">Windows Phone</label>
               </div>
             </div>
           </fieldset>
@@ -85,58 +95,56 @@
             <div class="form__fieldset-wrap form__fieldset-wrap--contacts">
               <div class="form__field form__field--contacts">
                 <label for="phone" class="form__label">Номер телефона</label>
-                <input type="text" class="form__input form__input--phone" id="phone" name="phone" placeholder="Номер, пожалуйста">
+                <input type="text" class="form__input form__input--phone input-text" id="phone" name="phone" placeholder="Номер, пожалуйста">
               </div>
               <div class="form__field form__field--contacts">
                 <label for="name" class="form__label">Адрес почты</label>
-                <input type="text" class="form__input form__input--email" id="email" name="email" placeholder="Введите почту *" required>
+                <input type="text" class="form__input form__input--email input-text" id="email" name="email" placeholder="Введите почту *" required>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--advances">
-            <legend class="form__legend">Ваши безшабашные достижения в путешествии</legend>
+            <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
             <div class="form__fieldset-wrap form__fieldset-wrap--advances">
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="selfi-shark" name="selfi-shark" checked>
-                <label class="form__label-value" for="selfi-shark">Сделал селфи с акулой</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="selfi-shark" name="selfi-shark" checked>
+                <label class="form__label-value input-check__label" for="selfi-shark">Сделал селфи с акулой</label>
               </div>
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="burned-beach" name="burned-beach" checked>
-                <label class="form__label-value" for="burned-beach">Обгорел на пляже</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="burned-beach" name="burned-beach" checked>
+                <label class="form__label-value input-check__label" for="burned-beach">Обгорел на пляже</label>
               </div>
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="see-norris" name="see-norris">
-                <label class="form__label-value" for="see-norris">Видел Чака Норриса</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="see-norris" name="see-norris">
+                <label class="form__label-value input-check__label" for="see-norris">Видел Чака Норриса</label>
               </div>
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="buy-souvenirs" name="buy-souvenirs">
-                <label class="form__label-value" for="buy-souvenirs">Накупил сувениров</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="buy-souvenirs" name="buy-souvenirs">
+                <label class="form__label-value input-check__label" for="buy-souvenirs">Накупил сувениров</label>
               </div>
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="held-tower" name="held-tower" checked>
-                <label class="form__label-value" for="held-tower">Удержал башню</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="held-tower" name="held-tower" checked>
+                <label class="form__label-value input-check__label" for="held-tower">Удержал башню</label>
               </div>
-              <div class="form__field">
-                <input class="form__check" type="checkbox" id="trashed-hotel" name="trashed-hotel">
-                <label class="form__label-value" for="trashed-hotel">Разгромил отель</label>
+              <div class="form__field form__field--advances input-check">
+                <input class="form__check input-check__check" type="checkbox" id="trashed-hotel" name="trashed-hotel">
+                <label class="form__label-value input-check__label" for="trashed-hotel">Разгромил отель</label>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--message">
-            <legend class="form__legend">Опишите свои эмоции</legend>
-            <div class="form__fieldset-wrap">
-              <div class="form__field">
-                <textarea class="form__textarea" name="message" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-              </div>
+            <legend class="form__legend form__legend--message">Опишите свои эмоции</legend>
+            <div class="form__fieldset-wrap form__fieldset-wrap--message">
+              <textarea class="form__textarea input-text input-text--textarea" name="message" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
 
           <div class="form__footer">
             <button class="form__submit btn btn--send" type="submit">Отправить форму</button>
             <p class="form__footnote">
-              <span class="form__warn">*</span> — обязательные поля
+              <span class="form__warn">*</span> — обязательные <span class="form__oly-desktop">для заполнения</span> поля
             </p>
           </div>
         </form>

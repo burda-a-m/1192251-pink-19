@@ -1,4 +1,7 @@
 .form-filter {
+  padding-top: 20px;
+  padding-bottom: 33px;
+
   background-color: $bg-gray;
 }
 
@@ -14,6 +17,8 @@
 .form-filter__tab-list {
   max-width: $min-width-body - $padding-hor * 2;
   margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
 
   text-align: center;
 }
@@ -22,13 +27,20 @@
   width: 65px;
   height: 48px;
 
+  margin: 0 5px;
+  padding: 0;
+
   background-color: transparent;
   border: none;
 
   color: $no-active__color;
 
+  cursor: pointer;
+
   &--active {
     color: $call-to-action__color;
+
+    cursor: default;
   }
 }
 
@@ -41,6 +53,7 @@
   display: none;
 
   width: 100%;
+  height: 37px;
 
   border-bottom: solid $reset__color 1px;
 
@@ -60,11 +73,19 @@
 .form-filter__buttons {
   max-width: $min-width-body - $padding-hor * 2;
   margin: 0 auto;
+  margin-top: 38px;
+}
+
+.form-filter__btn {
+  margin-bottom: 10px;
 }
 
 @media (min-width: $tablet-width) {
   .form-filter {
     display: flex;
+
+    padding-top: 59px;
+    padding-bottom: 54px;
   }
 
   .form-filter__canva {
@@ -89,12 +110,19 @@
     margin-left: auto;
   }
 
+  .form-filter__list-ranges {
+    margin-top: -17px;
+  }
+
   .form-filter__label {
-    display: flex;
+    display: block;
 
-    height: 56px;
+    height: 72px;
 
-    background-position: 0 center;
+    padding-top: 37px;
+    padding-left: 55px;
+
+    background-position: 3px center;
     background-repeat: no-repeat;
     background-size: 24px;
 
@@ -104,6 +132,7 @@
 
     &--fill {
       background-image: url("../img/icon-editor-fill.svg");
+      background-position: 3px 28px;
     }
 
     &--contrast {
@@ -113,31 +142,50 @@
 
   .form-filter__range {
     width: 202px;
+    margin-left: 0;
   }
 
   .form-filter__btn {
     width: 260px;
+
+    margin-bottom: 0;
+
+    margin-top: 25px;
   }
 
   .form-filter__buttons {
     margin-top: auto;
+    padding-left: 2px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .form-filter {
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-top: 57px;
+    padding-bottom: 56px;
+  }
+
   .form-filter__tools {
     width: 410px;
   }
 
   .form-filter__label {
+    padding-left: 92px;
+
+    background-position: 0 15px;
     background-size: 45px;
+
+    &--fill {
+      background-size: 49px;
+    }
   }
 
   .form-filter__range {
-    width: 290px;
+    width: 288px;
 
     margin: 0;
-    margin-left: 90px;
   }
 
   .form-filter__buttons {
@@ -146,6 +194,8 @@
 
     max-width: none;
     width: 410px;
+
+    padding-left: 0;
   }
 
   .form-filter__btn {
