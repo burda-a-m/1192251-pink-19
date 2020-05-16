@@ -1,9 +1,13 @@
 .packages {
   padding: 0;
-  padding-top: 90px;
-  padding-bottom: 50px;
+  padding-top: 89px;
+  padding-bottom: 42px;
 
   background-color: $bg-gray;
+}
+
+.packages::after {
+  font-size: (25px / 2); /* Размер шрифта половина размера высоты скоса. */
 }
 
 .packages__slider {
@@ -32,54 +36,84 @@
 .packages__header,
 .packages__field,
 .packages__result {
+  padding: 5px 15px;
   border: #e5e5e5 solid 2px;
 }
 
 .packages__field,
 .packages__result {
-  height: 59px;
+  height: 60px;
 
   background-color: #ffffff;
 }
 
 .packages__header {
-  height: 98px;
+  height: 100px;
 
-  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
+  vertical-align: top;
+  text-align: center;
 
   color: #ffffff;
+
   background-color: $color;
 
-  &--hit {
+  &--hit::before {
+    content: "";
+
+    display: block;
+    position: relative;
+
+    width: 74px;
+    height: 73px;
+
+    margin-bottom: -73px;
+    left: -15px;
+
     background-image: url("../img/bg-hit--new.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
   }
 }
 
+.packages__name {
+  display: block;
+
+  margin-top: 19px;
+
+  padding: 0 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .packages__price {
-  margin: 0;
-  margin-top: 10px;
+  display: block;
+
+  margin-top: 8px;
+
+  padding: 0 10px;
 
   font-size: 24px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .packages__result {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 22px;
+  padding-right: 22px;
 
   vertical-align: middle;
 
-  background-position: right 20px center;
+  background-position: right 19px center;
   background-repeat: no-repeat;
   background-image: url("../img/icon-no.svg");
 
   &--yes {
+    background-position: right 17px center;
     background-image: url("../img/icon-yes.svg");
     background-size: 31px 21px;
   }
@@ -92,7 +126,20 @@
   text-transform: uppercase;
 }
 
+.packages__toggle-list {
+  margin-top: 37px;
+}
+
 @media (min-width: $tablet-width) {
+  .packages {
+    padding-top: 86px;
+    padding-bottom: 68px;
+  }
+
+  .packages::after {
+    font-size: (51px / 2); /* Размер шрифта половина размера высоты скоса. */
+  }
+
   .packages__wrap {
     max-width: $tablet-width;
 
@@ -129,15 +176,85 @@
     display: none;
   }
 
-  .packages__header--hit {
-    background-image: url("../img/bg-hit-tablet--new.svg");
+  .packages__header {
+    height: 79px;
+  }
+
+  .packages__name {
+    margin-top: 15px;
+
+    font-size: 16px;
+  }
+
+  .packages__price {
+    margin-top: 3px;
+
+    font-size: 18px;
+  }
+
+  .packages__field,
+  .packages__result {
+    height: 47px;
+  }
+
+  .packages__field {
+    text-align: left;
+
+    font-weight: normal;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .packages {
+    padding-top: 147px;
+    padding-bottom: 98px;
+  }
+
+  .packages::after {
+    font-size: (83px / 2); /* Размер шрифта половина размера высоты скоса. */
+  }
+
   .packages__wrap {
     max-width: $desktop-width;
 
     @include wrap--desktop();
+  }
+
+  .packages__header {
+    height: 98px;
+  }
+
+  .packages__name {
+    margin-top: 18px;
+
+    font-size: 18px;
+  }
+
+  .packages__price {
+    margin-top: 8px;
+
+    font-size: 24px;
+  }
+
+  .packages__field,
+  .packages__result {
+    height: 60px;
+  }
+
+  .packages__field {
+    padding-left: 21px;
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .packages__header--hit::before {
+    width: 61px;
+    height: 61px;
+
+    margin-bottom: -61px;
+
+    background-image: url("../img/bg-hit-tablet--new.svg");
   }
 }

@@ -1,13 +1,4 @@
-
-
 .photofilter {
-  background-color: $bg-gray;
-}
-
-.photofilter__form {
-  padding-top: 20px;
-  padding-bottom: 30px;
-
   background-color: $bg-gray;
 }
 
@@ -23,13 +14,12 @@
 
 @media (min-width: $desktop-width) {
   .photofilter {
+    margin-bottom: 29px;
+
     background-color: #ffffff;
   }
 
   .photofilter__form {
     max-width: $desktop-width - $padding-hor-desktop * 2;
-
-    padding-left: 80px;
-    padding-right: 60px;
   }
 }

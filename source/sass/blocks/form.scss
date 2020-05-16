@@ -4,6 +4,8 @@
   flex-wrap: wrap;
 
   margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -11,7 +13,7 @@
   width: 100%;
 
   margin: 0;
-  padding: 35px 0;
+  padding: 20px 0;
 
   border: none;
 
@@ -29,10 +31,15 @@
 
   &--contacts {
     order: 1;
+
+    padding-top: 33px;
+    padding-bottom: 22px;
   }
 }
 
 .form__fieldset-wrap {
+  clear: both;
+
   padding: 0 $padding-hor;
 }
 
@@ -44,7 +51,7 @@
 
   padding: 40px;
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-left: 38px;
 
   line-height: 18px;
 
@@ -57,83 +64,58 @@
   &--contacts {
     display: none;
   }
+
+  &--app {
+    padding-top: 18px;
+    padding-bottom: 36px;
+  }
+
+  &--message {
+    padding-top: 18px;
+    padding-bottom: 17px;
+  }
+}
+
+.form__fieldset--advances {
+  padding-bottom: 0;
+}
+
+.form__fieldset--app {
+  padding-bottom: 5px;
+}
+
+.form__fieldset--message {
+  padding-bottom: 35px;
+}
+
+.form__field {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.form__field--advances {
+  margin-bottom: 45px;
+}
+
+.form__field--app {
+  margin-bottom: 38px;
 }
 
 .form__label {
   display: block;
 
-  padding-left: 18px;
-  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-bottom: 8px;
 
   text-transform: uppercase;
   color: $call-to-action__color;
-}
-
-.form__input {
-  width: 100%;
-  height: 59px;
-
-  padding: 0 18px;
-
-  @include border-form-element();
-  @include input--text();
-}
-
-.form__textarea {
-  width: 100%;
-  height: 197px;
-  resize: none;
-
-  padding: 18px;
-
-  background-color: #ffffff;
-
-  @include border-form-element();
-  @include input--text();
-}
-
-/* Оформляю placeholder */
-.form__input::-webkit-input-placeholder { /* webkit */
-  @include input--text();
-}
-
-.form__input:-moz-placeholder { /* Firefox 18- */
-  @include input--text();
-}
-
-.form__input::-moz-placeholder { /* Firefox 18+ */
-  @include input--text();
-}
-
-.form__input:-ms-input-placeholder { /* IE */
-  @include input--text();
-}
-
-/* * */
-.form__textarea::-webkit-input-placeholder { /* webkit */
-  @include input--text();
-}
-
-.form__textarea:-moz-placeholder { /* Firefox 18- */
-  @include input--text();
-}
-
-.form__textarea::-moz-placeholder { /* Firefox 18+ */
-  @include input--text();
-}
-
-.form__textarea:-ms-input-placeholder { /* IE */
-  @include input--text();
 }
 
 /* --- */
 
 .form__label-value {
   font-size: 18px;
-}
-
-.form__field {
-  padding: 10px 0;
 }
 
 .form__footer {
@@ -145,8 +127,15 @@
 }
 
 .form__footnote {
+  margin: 0;
+  margin-top: 38px;
+
   text-align: center;
   text-transform: uppercase;
+}
+
+.form__oly-desktop {
+  display: none;
 }
 
 .form__warn {
@@ -162,18 +151,25 @@
     order: 0;
 
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 16px;
 
     @include border-form-element();
 
     background-color: transparent;
 
     &--persone {
+      margin-bottom: 6px;
       padding: 0;
 
       border: none;
+    }
+
+    &--contacts {
+      padding-top: 37px;
+      padding-bottom: 0;
     }
   }
 
@@ -182,7 +178,7 @@
 
     width: auto;
 
-    padding: 0 $padding-hor;
+    padding: 0 25px;
 
     &--contacts {
       display: block;
@@ -190,8 +186,8 @@
   }
 
   .form__fieldset-wrap {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 59px;
+    padding-right: 59px;
   }
 
   .form__fieldset-wrap--persone {
@@ -202,11 +198,24 @@
     padding-right: 0;
   }
 
+  .form__field {
+    margin-bottom: 52px;
+  }
+
+  .form__label {
+    padding: 0;
+    padding-left: 18px;
+    padding-top: 13px;
+  }
+
+  .form__field--app {
+    margin-top: 25px;
+    margin-bottom: 38px;
+  }
+
   .form__field--persone {
     display: flex;
     align-items: center;
-
-    padding-bottom: 0;
   }
 
   .form__label--persone {
@@ -217,6 +226,8 @@
   .form__field--contacts {
     display: flex;
     flex-direction: column-reverse;
+
+    margin-bottom: 31px;
   }
 
   .form__input--phone {
@@ -243,16 +254,39 @@
     background-size: 20px, 100%;
   }
 
+  .form__field--advances {
+    margin-bottom: 45px;
+  }
+
+  .form__fieldset--advances {
+    padding-bottom: 5px;
+  }
+
+  .form__fieldset-wrap--advances {
+    padding-top: 24px;
+  }
+
+  .form__fieldset--message {
+    margin-bottom: 67px;
+  }
+
+  .form__fieldset-wrap--message {
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+
   .form__footer {
     order: 0;
 
     display: flex;
 
     padding: 0;
+    padding-bottom: 50px;
   }
 
   .form__submit {
     display: block;
+    min-width: 300px;
     margin: 0;
   }
 
@@ -283,22 +317,59 @@
     width: 435px;
   }
 
+  .form__fieldset-wrap--persone {
+    padding-top: 15px;
+  }
+
+  .form__fieldset--contacts {
+    padding-top: 33px;
+    padding-bottom: 15px;
+  }
+
   .form__fieldset-wrap--contacts {
     display: flex;
     justify-content: space-between;
   }
 
   .form__field--contacts {
-    width: 371px;
+    width: 374px;
+    margin-bottom: 0;
   }
 
-  .form__input--phone,
-  .form__input--email {
-    width: 100%;
+  .form__field--app {
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  .form__fieldset-wrap--app {
+    padding-top: 27px;
+    padding-left: 74px;
+    padding-right: 74px;
   }
 
   .form__fieldset-wrap--advances {
-    column-count: 3;
-    column-gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    height: 196px;
+    padding-top: 27px;
+  }
+
+  .form__fieldset--message {
+    padding-bottom: 7px;
+  }
+
+  .form__fieldset-wrap--message {
+    margin-bottom: 0;
+  }
+
+  .form__oly-desktop {
+    display: inline;
+  }
+
+  .form__footer {
+    padding-bottom: 0;
   }
 }

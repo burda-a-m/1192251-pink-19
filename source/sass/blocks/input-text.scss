@@ -1,0 +1,54 @@
+.input-text {
+  width: 100%;
+  height: 63px;
+
+  padding: 0 19px;
+
+  @include input--text();
+  @include border-form-element();
+
+  &--textarea {
+    height: 200px;
+    padding: 14px 17px;
+
+    line-height: 30px;
+
+    resize: none;
+  }
+}
+
+/* Оформляю placeholder */
+.input-text::-webkit-input-placeholder { /* webkit */
+  @include input--text();
+}
+
+.input-text:-moz-placeholder { /* Firefox 18- */
+  @include input--text();
+}
+
+.input-text::-moz-placeholder { /* Firefox 18+ */
+  @include input--text();
+}
+
+.input-text:-ms-input-placeholder { /* IE */
+  @include input--text();
+}
+
+/* Для IE убираю скругление углов у инпутов */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .input-text {
+    border-radius: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .input-text--textarea {
+    height: 193px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .input-text--textarea {
+    height: 126px;
+  }
+}

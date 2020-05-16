@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Приложение Пинк</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
     <!-- Подключаю Picturefill -->
     <script src="js/picturefill.min.js"></script>
-  <body class="not-footer-mobile">
 
+    <!-- Подключаю svg4everybody -->
+    <script src="js/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody(); // run it now or whenever you are ready
+    </script>
+    <!-- /// -->
+  </head>
+  <body class="not-footer-mobile">
     <header class="page-header">
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrap">
@@ -86,9 +97,7 @@
             от использования приложения длится
             целые сутки!
           </p>
-          <p class="effect__text">
-            <a class="effect__link" href="">Узнать больше об исследовании</a>
-          </p>
+          <a class="effect__link" href="">Узнать больше об исследовании</a>
         </div>
       </section>
 
@@ -153,16 +162,16 @@
                         &nbsp;
                       </td>
                       <th class="packages__header">
-                        База
-                        <p class="packages__price">1,99 USD</p>
+                        <span class="packages__name">База</span>
+                        <span class="packages__price">1,99 USD</span>
                       </th>
                       <th class="packages__header packages__header--hit">
-                        Стандарт
-                        <p class="packages__price">3,99 USD</p>
+                        <span class="packages__name">Стандарт</span>
+                        <span class="packages__price">3,99 USD</span>
                       </th>
                       <th class="packages__header">
-                        Анлим
-                        <p class="packages__price">3,99 USD</p>
+                        <span class="packages__name">Анлим</span>
+                        <span class="packages__price">9,99 USD</span>
                       </th>
                     </tr>
                     <tr>
@@ -236,23 +245,20 @@
       </section>
 
       <section class="contacts-footer">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="contacts-footer__offer offer">
-          <p class="offer__text">
-            Остались вопросы?<br>
-            Свяжитесь с нами!
-          </p>
-        </div>
+        <h2 class="contacts-footer__title">
+          Остались вопросы?<br>
+          Свяжитесь с нами!
+        </h2>
         <div class="contacts-footer__wrap">
-          <address class="contacts-footer__block">
+          <address class="contacts-footer__block contacts-footer__block--phone">
             <p class="contacts-footer__field">Звоните:</p>
             <a href="tel:+78125556666" class="contacts-footer__value">+7 (812) 555-66-66</a>
           </address>
-          <address class="contacts-footer__block">
+          <address class="contacts-footer__block contacts-footer__block--email">
             <p class="contacts-footer__field">Пишите:</p>
             <a href="mailto:mail@htmlacademy.ru" class="contacts-footer__value">mail@htmlacademy.ru</a>
           </address>
-          <address class="contacts-footer__block">
+          <address class="contacts-footer__block contacts-footer__block--address">
             <p class="contacts-footer__field">Приезжайте в гости:</p>
             <p class="contacts-footer__value">
               ул. Большая<br>
@@ -266,7 +272,7 @@
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x---new.jpg 1x, img/bg-map-tablet@2x---new.jpg 2x">
             <img class="map__img" src="img/bg-map-mobile@1x---new.png" srcset="img/bg-map-mobile@2x---new.jpg 2x" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
           </picture>
-          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f1f9ac978b965c41da787348b7c8c1dd845be253d4df7f98cf6754bfb704dc2&amp;source=constructor" width="320" height="200" frameborder="0"></iframe>
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f1f9ac978b965c41da787348b7c8c1dd845be253d4df7f98cf6754bfb704dc2&amp;source=constructor" width="320" height="200"></iframe>
         </div>
       </section>
     </main>

@@ -1,0 +1,66 @@
+.input-check__check {
+  @include visually-hidden();
+}
+
+.input-check__label {
+  display: block;
+  position: relative;
+
+  min-height: 37px;
+
+  line-height: 24px;
+
+  padding-left: 68px;
+  padding-top: 6px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 2px;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px #e5e5e5;
+  }
+}
+
+
+.input-check__label:hover::before,
+.input-check__check:focus + .input-check__label::before {
+  border-color: $color;
+}
+
+.input-check__label:active::before {
+  border-color: $call-to-action__color;
+}
+
+.input-check__check:checked + .input-check__label::after {
+  content: "";
+
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 9px;
+
+  width: 23px;
+  height: 11px;
+
+  border-left: solid $call-to-action__color 2px;
+  border-bottom: solid $call-to-action__color 2px;
+
+  transform: rotate(-45deg);
+}
+
+@media (min-width: $tablet-width) {
+  .input-check__label {
+    padding-left: 58px;
+  }
+}

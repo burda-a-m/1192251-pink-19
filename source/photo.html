@@ -3,13 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Фотографии пользователей - Пинк</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
     <!-- Подключаю Picturefill -->
     <script src="js/picturefill.min.js"></script>
+
+    <!-- Подключаю svg4everybody -->
+    <script src="js/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody(); // run it now or whenever you are ready
+    </script>
+    <!-- /// -->
   </head>
   <body>
-
     <header class="page-header">
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrap">
@@ -206,32 +216,32 @@
               <button class="form-filter__tab form-filter__tab--active">
                 <span class="visually-hidden">Обрезать</span>
                 <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/icon-editor---sprite.svg#icon-crop"></use>
+                  <use xlink:href="img/sprite.svg#icon-crop"></use>
                 </svg>
               </button>
               <button class="form-filter__tab">
                 <span class="visually-hidden">Залить</span>
                 <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/icon-editor---sprite.svg#icon-fill"></use>
+                  <use xlink:href="img/sprite.svg#icon-fill"></use>
                 </svg>
               </button>
               <button class="form-filter__tab">
                 <span class="visually-hidden">Контраст</span>
                 <svg class="form-filter__icon-tab" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/icon-editor---sprite.svg#icon-contrast"></use>
+                  <use xlink:href="img/sprite.svg#icon-contrast"></use>
                 </svg>
               </button>
             </div>
             <div class="form-filter__list-ranges">
-              <label class="form-filter__label form-filter__label--crop form-filter__label--active">
-                <input class="form-filter__range" type="range" name="crop" min="0" max="100" value="50">
-              </label>
-              <label class="form-filter__label form-filter__label--fill">
-                <input class="form-filter__range" type="range" name="fill" min="0" max="100" value="50">
-              </label>
-              <label class="form-filter__label form-filter__label--contrast">
-                <input class="form-filter__range" type="range" name="contrast" min="0" max="100" value="50">
-              </label>
+              <div class="form-filter__label form-filter__label--crop form-filter__label--active">
+                <input class="form-filter__range input-range" type="range" name="crop" min="0" max="100" value="50">
+              </div>
+              <div class="form-filter__label form-filter__label--fill">
+                <input class="form-filter__range input-range" type="range" name="fill" min="0" max="100" value="50">
+              </div>
+              <div class="form-filter__label form-filter__label--contrast">
+                <input class="form-filter__range input-range" type="range" name="contrast" min="0" max="100" value="50">
+              </div>
             </div>
             <div class="form-filter__buttons">
               <button class="form-filter__btn btn" type="submit">Запостить</button>
