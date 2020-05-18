@@ -58,6 +58,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .download {
+    padding-top: 5px;
+  }
+
   .download__btn {
     font-size: 21px;
     font-weight: bold;
