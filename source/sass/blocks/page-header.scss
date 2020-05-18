@@ -19,6 +19,10 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .page-header__title {
@@ -41,6 +45,11 @@
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: calc(50% - 30px) bottom;
+    background-size: 258px 286px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+    }
   }
 }
 
@@ -50,6 +59,10 @@
     padding-top: 110px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .page-header__bottom-wrap {
@@ -100,12 +113,21 @@
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: right -20px bottom;
     background-repeat: no-repeat;
+    background-size: 700px 545px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__bottom {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .page-header__bottom-wrap {
@@ -115,10 +137,17 @@
   }
 
   .page-header__bottom-wrap--hand {
-    min-height: 743px;
+    min-height: 741px;
+
+    padding-top: 45px;
 
     background-image: url("../img/iphone-hand-desktop@1x--new.png");
     background-position: right 50px bottom;
+    background-size: 560px 645px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x--new.png");
+    }
   }
 
   .page-header__title {
