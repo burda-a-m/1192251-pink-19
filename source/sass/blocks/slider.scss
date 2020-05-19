@@ -50,6 +50,10 @@
   border: none;
   background-color: transparent;
 
+  opacity: 0.3;
+
+  cursor: pointer;
+
   &::after {
     content: "";
 
@@ -64,10 +68,29 @@
 
     border-radius: 50%;
 
-    background-color: rgba(40, 54, 69, 0.3);
+    background-color: $color;
   }
+}
 
-  &--active::after {
+.slider__toggle:hover,
+.slider__toggle:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.slider__toggle:active {
+  opacity: 0.1;
+}
+
+.slider__toggle--active,
+.slider__toggle--active:hover,
+.slider__toggle--active:focus,
+.slider__toggle--active:active {
+  opacity: 1;
+
+  cursor: default;
+
+  &::after {
     background-color: transparent;
     border: solid 3px $color;
   }
@@ -84,6 +107,10 @@
 
   border: none;
 
+  opacity: 0.3;
+
+  cursor: pointer;
+
   &--left {
     background-image: url("../img/icon-review-arrow-left.svg");
     background-position: left center;
@@ -94,4 +121,14 @@
 
     transform: rotate(180deg);
   }
+}
+
+.slider__arrow:hover,
+.slider__arrow:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.slider__arrow:active {
+  opacity: 0.1;
 }

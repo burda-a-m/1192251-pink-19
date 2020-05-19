@@ -36,11 +36,11 @@
 
 .input-radio__label:hover::before,
 .input-radio__radio:focus + .input-radio__label::before {
-  border-color: $color;
+  box-shadow: 0 0 0 2px $color;
 }
 
 .input-radio__label:active::before {
-  border-color: $call-to-action__color;
+  box-shadow: 0 0 0 2px $call-to-action__color;
 }
 
 .input-radio__radio:checked + .input-radio__label::after {

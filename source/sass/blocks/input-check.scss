@@ -35,11 +35,12 @@
 
 .input-check__label:hover::before,
 .input-check__check:focus + .input-check__label::before {
-  border-color: $color;
+  box-shadow: 0 0 0 2px $color;
 }
 
-.input-check__label:active::before {
-  border-color: $call-to-action__color;
+.input-check__label:active::before,
+.input-check__check:active + .input-check__label::before {
+  box-shadow: 0 0 0 2px $call-to-action__color;
 }
 
 .input-check__check:checked + .input-check__label::after {

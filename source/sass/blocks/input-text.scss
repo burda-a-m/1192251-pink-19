@@ -17,6 +17,15 @@
   }
 }
 
+.input-text:hover {
+  border-color: $color;
+}
+
+.input-text:focus {
+  border-color: $call-to-action__color;
+  outline: none;
+}
+
 /* Оформляю placeholder */
 .input-text::-webkit-input-placeholder { /* webkit */
   @include input--text();

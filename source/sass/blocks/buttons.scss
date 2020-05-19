@@ -24,18 +24,52 @@
   margin: 5px 0;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: #ffffff;
+    background-color: $call-to-action__color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .btn--reset {
   color: $reset__color;
 
   border-color: $reset__color;
+
+  &:hover,
+  &:focus {
+    color: $no-active__color;
+    border-color: $no-active__color;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    background-color: $no-active__color;
+  }
 }
 
-.btn--transparent {
+.btn--invers {
   color: #ffffff;
   background-color: transparent;
   border-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: $call-to-action__color;
+  }
+
+  &:active {
+    color: $call-to-action__color--light;
+  }
 }
 
 .btn--send {
@@ -47,7 +81,20 @@
 
   color: #ffffff;
   background-color: #2aab6d;
-  border-color: #2aab6d;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 @media (min-width: $tablet-width) {
