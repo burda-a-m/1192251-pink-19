@@ -24,6 +24,7 @@
   }
 
   &[href]:active {
+    text-decoration: none;
     opacity: 0.3;
   }
 }

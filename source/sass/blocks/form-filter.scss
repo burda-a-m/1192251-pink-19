@@ -37,11 +37,19 @@
 
   cursor: pointer;
 
-  &--active {
-    color: $call-to-action__color;
-
-    cursor: default;
+  &:hover,
+  &:focus {
+    outline: none;
+    color: rgba(40, 54, 69, 0.5);
   }
+}
+
+.form-filter__tab--active,
+.form-filter__tab--active:hover,
+.form-filter__tab--active:focus {
+  color: $call-to-action__color;
+
+  cursor: default;
 }
 
 .form-filter__icon-tab {
