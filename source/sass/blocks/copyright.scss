@@ -14,8 +14,17 @@
 .copyright__link {
   margin-left: 11px;
 
-  path {
-    fill: $call-to-action__color;
+  color: $call-to-action__color;
+
+  &:hover,
+  &:focus {
+    color: $color;
+
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

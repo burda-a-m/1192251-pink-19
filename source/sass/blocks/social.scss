@@ -40,3 +40,17 @@
     background-image: url("../img/icon-youtube.svg");
   }
 }
+
+.social__link:hover,
+.social__link:focus {
+  border-color: $color;
+  outline: none;
+}
+
+.social__link:active {
+  border-color: $reset__color;
+
+  &::before {
+    opacity: 0.3;
+  }
+}
