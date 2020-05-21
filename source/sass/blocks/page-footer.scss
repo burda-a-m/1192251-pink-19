@@ -13,13 +13,34 @@
 
   margin: auto;
   margin-top: 40px;
+
+  color: $color;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $call-to-action__color;
+
+    outline: none;
+  }
+
+  &[href]:active {
+    color: $color;
+
+    opacity: 0.3;
+  }
 }
 
-.page-footer__logo-image {
-  display: block;
-
+.page-footer__logo-svg {
   width: 147px;
   height: 40px;
+
+  &--mobile {
+    display: block;
+  }
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .page-footer__social {
@@ -71,8 +92,22 @@
     @include wrap--desktop();
   }
 
+  .page-footer__logo-link {
+    transform: translateY(-7px);
+  }
+
+  .page-footer__logo-svg {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
+  }
+
   .page-footer__social {
     padding-right: 0;
-    padding-left: 14px;
+    padding-left: 9px;
   }
 }
