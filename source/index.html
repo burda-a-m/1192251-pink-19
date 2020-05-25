@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!-- Подключаю Picturefill -->
     <script src="js/picturefill.min.js"></script>
@@ -15,21 +15,24 @@
     <!-- Подключаю svg4everybody -->
     <script src="js/svg4everybody.min.js"></script>
     <script>
-      svg4everybody(); // run it now or whenever you are ready
+      svg4everybody(); // Запускаю svg4everybody
     </script>
     <!-- /// -->
   </head>
   <body class="not-footer-mobile">
+    <div style="display: none;">
+      <include src="source/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="page-header__top main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrap">
           <div class="main-nav__prev">
             <a class="main-nav__logo">
               <svg class="main-nav__logo-svg main-nav__logo-svg--tablet" aria-label="Логотип Пинк" width="146" height="40">
-                <use class="main-nav__logo-image" xlink:href="img/sprite.svg#logo-white--tablet"></use>
+                <use class="main-nav__logo-image" xlink:href="#logo-white--tablet"></use>
               </svg>
               <svg class="main-nav__logo-svg main-nav__logo-svg--desktop" aria-label="Логотип Пинк" width="146" height="40">
-                <use class="main-nav__logo-image" xlink:href="img/sprite.svg#logo-white--desktop"></use>
+                <use class="main-nav__logo-image" xlink:href="#logo-white--desktop"></use>
               </svg>
             </a>
             <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
@@ -276,7 +279,6 @@
             <source type="image/webp" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x---new.webp 1x, img/bg-map-desktop@2x---new.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x---new.webp 1x, img/bg-map-tablet@2x---new.webp 2x">
             <source type="image/webp" srcset="img/bg-map-mobile@1x---new.webp 1x, img/bg-map-mobile@2x---new.webp 2x">
-
             <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x---new.jpg 1x, img/bg-map-desktop@2x---new.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x---new.jpg 1x, img/bg-map-tablet@2x---new.jpg 2x">
             <img class="map__img" src="img/bg-map-mobile@1x---new.png" srcset="img/bg-map-mobile@2x---new.jpg 2x" width="320" height="200" alt="Наше местоположение на карте: улица Большая Конюшенная, дом 19/8">
@@ -289,10 +291,10 @@
     <footer class="page-footer">
       <a class="page-footer__logo-link">
         <svg class="page-footer__logo-svg page-footer__logo-svg--mobile" aria-label="Логотип Пинк" width="146" height="40">
-          <use class="page-footer__logo-image" xlink:href="img/sprite.svg#logo-blue--mobile"></use>
+          <use class="page-footer__logo-image" xlink:href="#logo-blue--mobile"></use>
         </svg>
         <svg class="page-footer__logo-svg page-footer__logo-svg--desktop" aria-label="Логотип Пинк" width="146" height="40">
-          <use class="page-footer__logo-image" xlink:href="img/sprite.svg#logo-blue--desktop"></use>
+          <use class="page-footer__logo-image" xlink:href="#logo-blue--desktop"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
@@ -310,7 +312,7 @@
         Разработано
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <svg class="copyright__image" aria-label="Логотип HTML Academy" width="27" height="34">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </p>
