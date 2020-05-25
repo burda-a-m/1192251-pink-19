@@ -19,6 +19,8 @@ var include = require("posthtml-include");
 
 var htmlmin = require("gulp-htmlmin");
 
+var uglify = require('gulp-uglify');
+
 var del = require("del");
 
 // Задача копирования файлов и папок в папку build
@@ -27,7 +29,7 @@ gulp.task("copy", function () {
     .src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**/*.webp",  // картинки остальных форматов положу при оптимизации
-      "source/js/**"
+      "source/js/*.min.js"     // копирую только минифицированые js-файлы
     ], {
       base: "source"
     })
@@ -45,8 +47,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()      // добавляю возможность в html использовать тег-директиву <include src="file.*"></include>
     ]))
-    .pipe(htmlmin({
-      removeComments: true // из HTML удаляю комментарии
+    .pipe(htmlmin({  // минифицирую html-файл
+      collapseWhitespace: true,
+      removeComments: true
     }))
     .pipe(gulp.dest("build"));
 });
@@ -68,6 +71,15 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+// Задача минимизации js
+gulp.task("uglify", function () {
+  return gulp
+    .src(["source/js/*.js", "!*.min.js"]) // выбираю не минифицированные файлы js
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest("build/js")) // Поместить результируюий css-файл в указанную папку
+});
+
 // Задача оптимизации изображений
 gulp.task("images", function () {
   return gulp
@@ -87,7 +99,7 @@ gulp.task("images", function () {
 });
 
 // Задача сборки svg-спрайтов
-// SVG-спрайт ранее собрал вручную, но задачу напишу, запускуать не буду
+// SVG-спрайт ранее собрал вручную, но задачу напишу, запускать не буду
 gulp.task("sprite", function () {
   return gulp
     .src(["source/img/{icon-,logo-pink-}*.svg", "source/img/htmlacademy.svg"]) // Ищу нужные svg
@@ -119,7 +131,7 @@ gulp.task("server", function () {
 });
 
 // Команда "build" Компилирует проект в папку "build"
-gulp.task("build", gulp.series("clear", "copy", "images", "css", "html"));
+gulp.task("build", gulp.series("clear", "copy", "images", "css", "uglify", "html"));
 
 // Командой start запускаем сначала задачу "css", "html" и потом "server"
 gulp.task("start", gulp.series("build", "server"));
