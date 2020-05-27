@@ -73,14 +73,8 @@
   margin: 0 auto;
 }
 
-.photo__main-mark {
+.photo--main .photo__link {
   position: relative;
-  height: 0;
-  max-width: $desktop-width;
-
-  z-index: 10;
-
-  @include wrap();
 
   &::after {
     content: "Панорама дня";
@@ -90,7 +84,7 @@
     line-height: 36px;
 
     position: absolute;
-    bottom: -36px;
+    top: 0;
     right: $padding-hor;
 
     font-size: 12px;
@@ -132,6 +126,11 @@
     height: 509px;
 
     overflow: hidden;
+
+    &::after {
+      top: 57px;
+      right: 20px;
+    }
   }
 
   .photo--main .photo__image {
@@ -140,10 +139,6 @@
     height: 100%;
     margin-left: 50%;
     transform: translateX(-50%);
-  }
-
-  .photo__main-mark::after {
-    bottom: -93px;
   }
 
   .photo--main .photo__info {
@@ -172,11 +167,12 @@
 @media (min-width: $desktop-width) {
   .photo--main .photo__link {
     height: 506px;
-  }
 
-  .photo__main-mark::after {
-    right: 10px;
-    bottom: -90px;
+    &::after {
+      top: 53px;
+      right: 50%;
+      transform: translateX(470px);
+    }
   }
 
   .photo--main .photo__info {

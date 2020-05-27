@@ -24,7 +24,7 @@
 
   order: $order;
 
-  &--persone,
+  &--persona,
   &--advances {
     order: 0;
   }
@@ -60,7 +60,7 @@
 
   color: $call-to-action__color;
 
-  &--persone,
+  &--persona,
   &--contacts {
     display: none;
   }
@@ -160,7 +160,7 @@
 
     background-color: transparent;
 
-    &--persone {
+    &--persona {
       margin-bottom: 6px;
       padding: 0;
 
@@ -190,7 +190,7 @@
     padding-right: 59px;
   }
 
-  .form__fieldset-wrap--persone {
+  .form__fieldset-wrap--persona {
     display: flex;
     flex-direction: column;
 
@@ -213,12 +213,12 @@
     margin-bottom: 38px;
   }
 
-  .form__field--persone {
+  .form__field--persona {
     display: flex;
     align-items: center;
   }
 
-  .form__label--persone {
+  .form__label--persona {
     padding: 0;
     padding-right: 20px;
   }
@@ -312,28 +312,30 @@
     padding: 0 23px;
   }
 
-  .form__fieldset--persone,
+  .form__fieldset--persona,
   .form__fieldset--app {
     width: 435px;
   }
 
-  .form__fieldset-wrap--persone {
+  .form__fieldset-wrap--persona {
     padding-top: 15px;
   }
 
   .form__fieldset--contacts {
-    padding-top: 33px;
+    padding-top: 13px;
     padding-bottom: 15px;
   }
 
   .form__fieldset-wrap--contacts {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .form__field--contacts {
     width: 374px;
     margin-bottom: 0;
+    margin-top: 20px;
   }
 
   .form__field--app {
@@ -348,13 +350,18 @@
   }
 
   .form__fieldset-wrap--advances {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    flex-wrap: wrap;
+    column-width: 176px;
+    column-gap: 94px;
 
-    height: 196px;
-    padding-top: 27px;
+    min-height: 196px;
+    padding-top: 25px;
+  }
+
+  .form__field--advances {
+    width: 267px;
+
+    margin-bottom: 44px;
+    padding-top: 2px;
   }
 
   .form__fieldset--message {

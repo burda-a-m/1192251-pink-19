@@ -27,9 +27,10 @@ var del = require("del");
 gulp.task("copy", function () {
   return gulp
     .src([
+      "source/css/**/*.css",
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**/*.webp",  // картинки остальных форматов положу при оптимизации
-      "source/js/*.min.js"     // копирую только минифицированые js-файлы
+      "source/js/*.js"     // копирую только js-файлы
     ], {
       base: "source"
     })
@@ -64,6 +65,9 @@ gulp.task("css", function () {
     .pipe(postcss([                // Своего рода парссер css-кода со своими методами и функциями
       autoprefixer()               // Добавляет префиксы в css-файл
     ]))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("source/css")) // Кладу скомпилированный css не вмин ифицированный в папку source
+    .pipe(gulp.dest("build/css"))  // Кладу скомпилированный css не вмин ифицированный в папку build
     .pipe(csso())                  // Минифицирует css-файл
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))    // В конечном состоянии css-файла происходит перелиновка связей с scss
@@ -74,7 +78,7 @@ gulp.task("css", function () {
 // Задача минимизации js
 gulp.task("uglify", function () {
   return gulp
-    .src(["source/js/*.js", "!*.min.js"]) // выбираю не минифицированные файлы js
+    .src(["source/js/*.js", "!source/js/*.min.js"]) // выбираю не минифицированные файлы js
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest("build/js")) // Поместить результируюий css-файл в указанную папку
@@ -124,10 +128,10 @@ gulp.task("server", function () {
 
   // Сервер, следи в указанной папке за файлами, указанного типа,
   // и в случае изменений превращай их в css и сам перезапустись
-  gulp.watch("source/sass/**/*.scss", gulp.series("css"), server.reload);
+  gulp.watch("source/sass/**/*.scss").on("change", gulp.series("css"), server.reload);
 
   // Сервер, следи в указанной папке за файлами-html, и, в случае изменений, сам перезагрузись
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html").on("change", gulp.series("html"), server.reload);
 });
 
 // Команда "build" Компилирует проект в папку "build"

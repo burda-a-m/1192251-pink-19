@@ -56,3 +56,19 @@
   font-weight: $font-weight-text;
   color: $color;
 }
+
+@mixin br--hidde() {
+  content: "";
+
+  &::after {
+    content: "\00a0";
+  }
+}
+
+@mixin br--show() {
+  content: normal;
+
+  &::after {
+    content: "";
+  }
+}

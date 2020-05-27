@@ -23,6 +23,14 @@
     background-size: 238px 276px;
   }
 
+  .effect__br--desktop {
+    content: "";
+
+    &::after {
+      content: "\00a0";
+    }
+  }
+
   .effect__title {
     margin: 0;
     margin-bottom: 10px;
@@ -37,6 +45,9 @@
   .effect__text {
     margin: 0;
     margin-bottom: 11px;
+
+    padding: 0;
+    padding-right: 5px;
   }
 
   .effect__link {
@@ -54,11 +65,11 @@
 
     @include wrap--desktop();
 
-    padding-top: 123px;
+    padding-top: 96px;
     padding-bottom: 113px;
     padding-left: 375px;
 
-    background-position: $padding-hor-desktop 33px;
+    background-position: $padding-hor-desktop 7px;
     background-size: 298px 345px;
   }
 
@@ -66,8 +77,12 @@
     margin-bottom: 22px;
   }
 
-  .effect__br-title {
-    display: none;
+  .effect__br {
+    @include br--hidde();
+  }
+
+  .effect__br--desktop {
+    @include br--show();
   }
 
   .effect__text {

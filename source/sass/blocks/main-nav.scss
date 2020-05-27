@@ -260,8 +260,6 @@
   }
 
   .main-nav__list {
-    position: absolute;
-
     width: 100%;
   }
 
@@ -271,7 +269,6 @@
 
   .main-nav--nojs .main-nav__list {
     display: block;
-    position: static;
   }
 
   .main-nav--nojs .main-nav__prev,
